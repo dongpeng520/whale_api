@@ -1,0 +1,29 @@
+/**
+ * Created by Administrator on 2017/4/6.
+ */
+whaleModule.controller("CrawlerApplycontroller",["$scope","$rootScope","$window","$http","$interval","$location","$state", function($scope,$rootScope,$window,$http,$interval,$location,$state){
+    $scope.Crawler_close=function(){
+        //$scope.$parent.$parent.crawler_close=false;
+        $rootScope.crawler_close=false;
+        $("body").css({
+            "margin-top" : '0px',
+            "margin-right" : '0px',
+            "overflow" : 'visible'
+        })
+    }
+    $scope.guanli=function(data){
+        whale.store("appid",data);
+        $rootScope.crawler_close=false;
+        if(window.location.href.indexOf("/overview") !== -1){
+            window.history.go(0);
+            location.reload()
+        }else{
+            $("body").css({
+                "margin-top" : '0px',
+                "margin-right" : '0px',
+                "overflow" : 'visible'
+            })
+            $state.go('whale.overview')
+        }
+    }
+}])

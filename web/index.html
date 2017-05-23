@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="whaleModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5,maximum-scale=1.0, user-scalable=no">
+    <title>whale client</title>
+    <link rel="icon" href="static/img/whale_ico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/whale_ico.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="static/js/libs/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="static/js/libs/jquery.datetimepicker.css">
+    <link type="text/css" rel="stylesheet" href="static/js/libs/jquery.jsonview.min.css">
+    <link type="text/css" rel="stylesheet" href="static/js/libs/slick.css">
+    <link type="text/css" rel="stylesheet" href="static/css/common.css">
+    <link type="text/css" rel="stylesheet" href="static/css/animation.css">
+    <link type="text/css" rel="stylesheet" href="static/css/global.css">
+    <link type="text/css" rel="stylesheet" href="static/css/home.css">
+    <link type="text/css" rel="stylesheet" href="static/css/indexhome.css">
+    <link type="text/css" rel="stylesheet" href="static/css/overview.css">
+    <link type="text/css" rel="stylesheet" href="static/css/setup.css">
+    <link type="text/css" rel="stylesheet" href="static/css/history.css">
+    <link type="text/css" rel="stylesheet" href="static/css/result.css">
+    <link type="text/css" rel="stylesheet" href="static/css/API.css">
+
+    <!--<base href="/">-->
+</head>
+
+<body>
+    <div class="error-msg" ng-click="errormsg = null">
+        <span ng-class="{'msg-active':errormsg}" ng-bind="errormsg"></span>
+    </div>
+    <div ui-view></div>
+    <iframe src="" frameborder="0" style="display:none;" id="OpenPhotos"></iframe>
+    <script type="text/javascript" src="static/js/libs/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="static/js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/libs/jquery.smoove.js"></script>
+    <script type="text/javascript" src="static/js/libs/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="static/js/libs/laydate.dev.js"></script>
+    <script type="text/javascript" src="static/js/libs/echarts.min.js"></script>
+    <script type="text/javascript" src="static/js/libs/jquery.jsonview.min.js"></script>
+    <script type="text/javascript" src="static/js/libs/slick.min.js"></script>
+    <script src="static/js/libs/angular.js"></script>
+    <script src="static/js/libs/angular-ui-router.js"></script>
+    <script src="static/js/libs/md5.js"></script>
+    <script src="static/js/common/main.js"></script>
+    <script src="static/js/common/check.js"></script>
+    <script src="static/js/controller.js"></script>
+    <script src="static/js/controller/filter.js"></script>
+    <script src="static/js/controller/directive.js"></script>
+    <script src="static/js/controller/directive2.js"></script>
+    <script src="static/js/controller/indexBig.js"></script>
+    <script src="static/js/controller/indexsmall.js"></script>
+    <script src="static/js/controller/whaleApi.js"></script>
+    <script src="static/js/controller/classify.js"></script>
+    <script src="static/js/controller/APIdetail.js"></script>
+    <script src="static/js/controller/home.js"></script>
+    <script src="static/js/controller/overview.js"></script>
+    <script src="static/js/controller/result.js"></script>
+    <script src="static/js/controller/setup.js"></script>
+    <script src="static/js/controller/history.js"></script>
+    <script src="static/js/controller/CrawlerApply.js"></script>
+    <script src="static/js/controller/overset.js"></script>
+    <script src="static/js/controller/overHead.js"></script>
+    <script src="static/js/controller/API.js"></script>
+    <script src="static/js/controller/APIview.js"></script>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog m150">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        请填写并提交以下信息我们将第一时间联系您
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form role="form" method="post" action=""
+                              onsubmit="{return false}">
+                            <div class="row">
+                                <div class="col-md-12 mtop">
+                                    <div class="form-group-lg  has-feedback">
+                                        <input class="form-control" type="text" id="realName"
+                                               name="name" placeholder="姓名">
+										<span class="glyphicon  form-control-feedback"
+                                              id="realNameSpan"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mtop">
+                                    <div class="form-group-lg  has-feedback">
+                                        <input class="form-control" type="text" id="phone"
+                                               name="phone" placeholder="手机号码"> <span
+                                            class="glyphicon form-control-feedback" id="phoneSpan"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mtop">
+                                    <div class="form-group-lg  has-feedback">
+                                        <input class="form-control" type="text" id="YZM"
+                                               name="name" placeholder="验证码"><span
+                                            class="glyphicon form-control-feedback" id="yzmSpan"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mtop">
+                                    <div class="form-group-lg  has-feedback">
+                                        <button class="btn btn-primary btn-block  btn-paddings"
+                                                type="submit" id="SEND">发送验证码
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mtop">
+                                    <div class="form-group-lg has-feedback">
+                                        <input class="form-control" type="text" id="accout"
+                                               name="accout" placeholder="公司名称"> <span
+                                            class="glyphicon  form-control-feedback" id="accoutSpan"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mtop">
+									<span class="form-group-lg"> <select
+                                            class="form-control" id="citySelect">
+                                        <option value="shanghai">上海</option>
+                                        <option value="beijing">北京</option>
+                                        <option value="shenzheng">广东</option>
+                                    </select>
+									</span>
+                                </div>
+                                <div class="col-md-12 mtop">
+                                    <div class="form-group has-feedback">
+                                        <textarea class="form-control" id="notenote" rows="3" placeholder="描述信息（可选）"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="alert" id="showDiv"
+                                 class="alert alert-danger text-center col-md-12 hintmc"
+                                 style='display: none'>以上标红的内容格式不正确，请修改后再提交
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mtop-btn">
+                                    <button class="btn btn-primary btn-block  btn-paddings"
+                                            type="submit" id="button_home">提交信息
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/ng-template" id="lovestory.html">
+        <div class="hexagon">
+            <div class="hexagon-in1">
+                <div class="hexagon-in2">
+                </div>
+            </div>
+        </div>
+        <!--<div ng-include="'lovestory.html'" class="hexagon_include"></div>-->
+    </script>
+    <script type="text/ng-template" id="CrawlerApply.html">
+        <div class="contain">
+            <div class="Crawler_close"><div class="close1" ng-click="Crawler_close()"></div></div>
+            <div class="contain1">请选择爬虫应用</div>
+            <div class="contain2">
+                <div class="apply" ng-repeat="dd in CrawlerApply" ng-class="{'zeromargin':($index+1)%3=='0'}">
+                    <div class="img">
+                        <img ng-if="dd.status=='1'" ng-src="static/img/going.png" alt="">
+                        <img ng-if="dd.status=='0'" ng-src="static/img/waiting.png" alt="">
+                        <img ng-if="dd.status=='2'" ng-src="static/img/end.png" alt="">
+                    </div>
+                    <div class="name">{{dd.appName}}</div>
+                    <div class="time">
+                        <p class="time1">启动时间：{{dd.startTime | limitTo :10}}</p>
+                        <p class="time2">当前状态：<span ng-class="{'aa':dd.status=='1','as':dd.status=='0','ad':dd.status=='2'}">{{ dd.status | crawlerstatus}}</span></p>
+                    </div>
+                    <div class="admin" ng-click="guanli(dd.appid)">管理</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="overSet.html">
+        <div class="overSet">
+            <div class="over_logo">
+                <div class="contain" ng-click="gotohome()">
+                    <img src="static/img/whale_o.png" alt="">
+                </div>
+            </div>
+            <div class="over_set">
+                <div class="set1">
+                    <span class="span1" ng-click="shuaxin()">刷新</span>
+                    <span class="span2" ng-click="Crawler_close()">切换</span>
+                </div>
+                <div class="set2">
+                    <a ui-sref="whale.overview" ng-class="{'blue':change_blue=='overview'}" class="s1 a1">
+                        <img src="static/img/set1.png" alt="">
+                        <span>总览</span>
+                    </a>
+                    <a ui-sref="whale.setup" ng-class="{'blue':change_blue=='setup'}" class="s1 a2">
+                        <img src="static/img/set2.png" alt="">
+                        <span>爬虫设置</span>
+                    </a>
+                    <a ui-sref="whale.history" ng-class="{'blue':change_blue=='history'}" class="s1 a3">
+                        <img src="static/img/set3.png" alt="">
+                        <span>爬虫历史</span>
+                    </a>
+                    <a ui-sref="whale.result" ng-class="{'blue':change_blue=='result'}" class="s1 a4">
+                        <img src="static/img/set4.png" alt="">
+                        <span>爬虫结果</span>
+                        <span class="span2">{{Crawlerresult | number}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+</script>
+    <script type="text/ng-template" id="overHead.html">
+        <div class="overHead">
+            <span class="head_span1" ng-click="openlogin()">修改密码</span>
+            <span class="head_span2" ng-click="loginout()">退出</span>
+        </div>
+        <div id="password" ng-if="openflag_1">
+            <div class="contain">
+                <div class="close"><span id="loginclosed" ng-click="closedlogin()">&times;</span></div>
+                <div class="title">修改密码</div>
+                <div class="input_name">
+                    <input type="password" ng-model="loginInf.name11" placeholder="旧密码" autofocus="autofocus">
+                </div>
+                <div class="input_password">
+                    <input type="password" ng-model="loginInf.password11" placeholder="新密码">
+                </div>
+                <div class="input_password">
+                    <input type="password" ng-model="loginInf.password21" placeholder="确认密码">
+                </div>
+                <div class="login_error" ng-if="error">{{error_wenzi}}</div>
+                <div class="submit" ng-click="submit()">确认</div>
+            </div>
+        </div>
+    </script>
+    <script>
+        $(".homerightX1").smoove({
+            offset  : '10%',
+        });
+        $(".homerightX2").smoove({
+            offset  : '20%',
+        });
+        $(".homerightX3").smoove({
+            offset  : '40%',
+        });
+        $(".homerightX4").smoove({
+            offset  : '50%',
+        });
+        $(".homerightX5").smoove({
+            offset  : '10%',
+        });
+    </script>
+</body>
+</html>

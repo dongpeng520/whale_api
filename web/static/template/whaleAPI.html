@@ -1,0 +1,29 @@
+<div id="whaleAPI">
+    <div class="whaleAPI layout">
+        <div class="API" ng-repeat="data in selectApiInfobycategroy">
+            <div class="API_zuo">
+                <div class="contain">
+                    <div class="div1">
+                        <lazy-src image-src="{{picurl}}"></lazy-src>
+                    </div>
+                    <div class="div2">{{data.categroy.categroyName}}</div>
+                    <div class="div3">{{data.categroy.categroyNote}}</div>
+                    <div class="div4" ui-sref="index.whaleAPI.classify" ng-click="whaleAPIClassify(data.categroy)">点击查看</div>
+                </div>
+            </div>
+            <div class="API_you">
+                <div class="contain" ng-repeat="dd in data.apiInfolist">
+                    <div class="contain1">
+                        <div class="div1">
+                            <lazy-src image-src="{{picurl}}"></lazy-src>
+                        </div>
+                        <div class="div2">{{dd.apidesc}}</div>
+                        <div class="div3">{{dd.remark}}</div>
+                        <div class="div4">点击查看</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <api-loading></api-loading>
+</div>

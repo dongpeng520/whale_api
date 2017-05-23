@@ -1,0 +1,70 @@
+<!--选择爬虫应用-->
+<div ng-include="'CrawlerApply.html'" id="Crawler" ng-controller="CrawlerApplycontroller" ng-if="crawler_close"></div>
+
+
+<div ng-include="'overSet.html'" id="overSet" ng-controller="overSetcontroller"></div>
+<div ng-include="'overHead.html'" id="overHead" ng-controller="overHeadcontroller"></div>
+
+<div id="download" ng-if="down_flag">
+    <div class="contain">
+        <div class="contain1">
+            <div class="title">
+                <div class="title1">抓取结果文件下载</div>
+                <div class="title2" ng-class="{'selecttaskName_change':selecttaskName_change}">
+                    <div class="selected" id="selectedtaskName" ng-click="selecttaskName(null,$event)">{{taskName}}</div>
+                    <div class="select" ng-if="over_selecttaskName">
+                        <div class="select1" ng-click="selecttaskName('所有',$event)">所有</div>
+                        <div class="select1" ng-repeat="t in taskname" ng-click="selecttaskName(t,$event)">{{ t | fitertaskname}}</div>
+                    </div>
+                </div>
+                <div class="all"><div class="close" ng-click="closeDown(false)">&times;</div></div>
+            </div>
+            <task-list></task-list>
+        </div>
+        <div class="contain2"><historytaskpage-middle></historytaskpage-middle></div>
+    </div>
+</div>
+
+<div id="resultContain">
+    <div class="contain1">
+        <div class="title">爬取结果</div>
+        <div class="con">
+            <div class="zt">
+                <div class="zt1">
+                    本轮爬取任务启动于<span>{{overCurrentTask.startTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>，
+                </div>
+                <div class="zt2" ng-if="overCurrentTask.status!='1'">
+                    结束于<span>{{overCurrentTask.endTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>，
+                </div>
+                <div class="zt3">
+                    共爬取<span>{{Crawlerresult | number}}</span>条数据
+                </div>
+            </div>
+            <div class="set1" ng-click="closeDown(true)">爬取文件下载</div>
+            <div class="set2"><a ui-sref="whale.history">爬取历史</a></div>
+        </div>
+    </div>
+    <div class="contain2">
+        <div class="con1">
+            <div class="sele" ng-repeat="a in DataCategory" ng-click="selectCategory(a)" ng-class="{'categoryActive':current === a}">{{a}}</div>
+        </div>
+        <div class="con2">
+            <div class="time1">开始时间</div>
+            <div class="time2"><input class="form-control" id="starttime" type="text" ng-model="result.starttime" placeholder="过滤开始时间"></div>
+            <div class="time1">结束时间</div>
+            <div class="time2"><input class="form-control" id="endtime" type="text" ng-model="result.endtime" placeholder="过滤结束时间"></div>
+            <div class="time5" ng-click="timeChangeResult()">查询</div>
+            <div class="time6 time5" ng-click="exportResults()">导出结果</div>
+        </div>
+        <div class="con3">
+            <order-list picloading="picloading" orderlist="querybycategory"></order-list>
+        </div>
+    </div>
+    <div class="contain3">
+        <div class="con1">* 以上只显示本轮任务爬取的最近10,000条数据，如需获取全部历史数据，请点击“爬取文件下载”。</div>
+        <div class="con2">
+            <page-middle></page-middle>
+        </div>
+    </div>
+</div>
+<detail-list></detail-list>

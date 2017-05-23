@@ -1,0 +1,39 @@
+<div>
+    <div id="details" ng-if="details_seceld">
+        <div class="contain">
+            <div class="detail_title">
+                <div class="title">数据详情
+                    <div class="closed" ng-click="details_close()"></div>
+                </div>
+
+            </div>
+            <div class="details_contain">
+                <!--<pre id="custom-spacing">{{details | json:4 }}</pre>-->
+                <pre id="custom-spacing"></pre>
+                <!--<div id="json-collapsed"></div>-->
+            </div>
+            <div id="pic_loading" ng-if="picloading">
+                <div class="spinner">
+                    <div class="spinner-container container1">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container2">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container3">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

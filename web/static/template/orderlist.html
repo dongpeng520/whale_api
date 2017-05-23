@@ -1,0 +1,41 @@
+<div>
+    <div class="order">
+        <ul class="order_title">
+            <li class="order_list1">爬取时间</li>
+            <li class="order_list2">类别</li>
+            <li class="order_list3">来源URL</li>
+            <li class="order_list4"></li>
+        </ul>
+        <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order |limitTo :15" repeat-finish="renderFinish()">
+            <li class="order_list1">{{list.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+            <li class="order_list2" ng-bind="list.category"></li>
+            <li class="order_list3" ng-bind="list.url"></li>
+            <li class="order_list4">
+                <span ng-click="details_change(list._id)" ng-bind="'详情'"></span>
+            </li>
+        </ul>
+        <div id="zero_order" ng-if="order.length==0">无数据</div>
+        <div id="pic_loading" ng-if="picloading">
+            <div class="spinner">
+                <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

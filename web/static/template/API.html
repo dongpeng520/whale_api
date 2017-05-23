@@ -1,0 +1,34 @@
+<div ng-include="'CrawlerApply.html'" id="Crawler" ng-if="crawler_close"></div>
+<div class="overSet">
+    <div class="over_logo">
+        <div class="contain" ng-click="gotohome()">
+            <img src="static/img/whale_o.png" alt="">
+        </div>
+    </div>
+    <div class="over_set">
+        <div class="set1">
+            <span class="span1" ng-click="shuaxin()">刷新</span>
+            <span class="span2" ng-click="Crawler_open()">切换</span>
+        </div>
+        <div class="set2">
+            <a ui-sref-active="active" ui-sref="API.view" class="s1 a1">
+                <img src="static/img/set1.png" alt="">
+                <span>总览</span>
+            </a>
+            <a ui-sref-active="active" ui-sref="API.view1" class="s1 a2">
+                <img src="static/img/set2.png" alt="">
+                <span>购买记录</span>
+            </a>
+            <a class="s1 a3 aa">
+                <img src="static/img/set3.png" alt="">
+                <span>用户中心</span>
+            </a>
+            <ul>
+                <li ui-sref-active="active" ui-sref="API.view2">账户信息</li>
+                <li ui-sref-active="active" ui-sref="API.view3">修改密码</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div ng-include="'overHead.html'" id="overHead" ng-controller="overHeadcontroller"></div>
+<div ui-view class="API"></div>

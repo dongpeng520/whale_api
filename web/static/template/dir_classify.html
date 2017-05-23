@@ -1,0 +1,13 @@
+<div class="contain_class">
+    <div class="contain" ng-repeat="dd in DataCategory1" ng-class="{'zeromargin':($index+1)%5=='0'}">
+        <div class="contain1">
+            <div class="div1">
+                <lazy-src image-src="{{picurl}}"></lazy-src>
+            </div>
+            <div class="div2">{{dd.apidesc}}</div>
+            <div class="div3">{{dd.remark}}</div>
+            <div class="div4" ui-sref="index.whaleAPI.APIdetail" ng-click="enterDetail(dd.apiId)">点击查看</div>
+        </div>
+    </div>
+    <api-loading></api-loading>
+</div>

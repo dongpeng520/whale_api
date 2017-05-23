@@ -1,0 +1,153 @@
+<div class="APIdetail2_contain">
+    <div id="pic_loading1" ng-if="picloading">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="detail" ng-if="current =='API调用文档'">
+        <div class="detail1">1.全国车辆违章信息</div>
+        <div class="detail2">
+            <div class="d1">接口地址&nbsp;&nbsp;http://api.xxx.com/credit/trafficInfo</div>
+            <div class="d1">支持格式&nbsp;&nbsp;JSON</div>
+            <div class="d1">请求方式&nbsp;&nbsp;<span>POST</span></div>
+            <div class="d2">输入参数</div>
+            <div class="API_order">
+                <ul class="order_title">
+                    <li class="order_list1">字段名称</li>
+                    <li class="order_list2">字段描述</li>
+                    <li class="order_list3">建议默认值</li>
+                    <li class="order_list4">可选/必选</li>
+                    <li class="order_list5">备注</li>
+                </ul>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                    <li class="order_list1">11</li>
+                    <li class="order_list2">22</li>
+                    <li class="order_list3">33</li>
+                    <li class="order_list4">44</li>
+                    <li class="order_list5">55</li>
+                </ul>
+            </div>
+            <div class="d2">响应结果</div>
+            <div class="details_contain">
+                <pre id="custom-spacing"></pre>
+            </div>
+            <div class="d2">输出参数</div>
+            <div class="API_order order590">
+                <ul class="order_title">
+                    <li class="order_list1">字段名称</li>
+                    <li class="order_list2">字段描述</li>
+                    <li class="order_list5">备注</li>
+                </ul>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                    <li class="order_list1">11</li>
+                    <li class="order_list2">22</li>
+                    <li class="order_list5">55</li>
+                </ul>
+            </div>
+            <div class="d2">机动车信息</div>
+            <div class="API_order order590">
+                <ul class="order_title">
+                    <li class="order_list1">字段名称</li>
+                    <li class="order_list2">字段描述</li>
+                    <li class="order_list5">备注</li>
+                </ul>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                    <li class="order_list1">11</li>
+                    <li class="order_list2">22</li>
+                    <li class="order_list5">55</li>
+                </ul>
+            </div>
+            <div class="d2">机动车信息</div>
+            <div class="API_order order590">
+                <ul class="order_title">
+                    <li class="order_list1">字段名称</li>
+                    <li class="order_list2">字段描述</li>
+                    <li class="order_list5">备注</li>
+                </ul>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                    <li class="order_list1">11</li>
+                    <li class="order_list2">22</li>
+                    <li class="order_list5">55</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="detail" ng-if="current =='返回码'">
+        <div class="API_order order440">
+            <ul class="order_title">
+                <li class="order_list1">错误码</li>
+                <li class="order_list2">说明</li>
+            </ul>
+            <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                <li class="order_list1">11</li>
+                <li class="order_list2">22</li>
+            </ul>
+        </div>
+    </div>
+    <div class="detail" ng-if="current =='接入指南'">
+        <div class="de1">1.接口方式</div>
+        <div class="de2">所有鲸鱼API采用http连接，以GET/POST的方式进行调用，各项调用参数使用UTF-8编码，响应数据一般为JSON格式。</div>
+        <div class="de1">2. API账号&鉴权</div>
+        <div class="de2"> 用户调用鲸鱼API时需要先申请ApiID，可获得ApiID和相应的ApiSecret。</div>
+        <div class="de2">通过调用获取访问凭证API，获取accessToken（访问凭证）和合法访问的时间（默认7200s）</div>
+        <div class="de2">调用每个应用API时，在url中统一传入参数accessToken= &#60;accessToken&#62;，则可合法访问API </div>
+        <div class="de2">accessToken过期后，须重新申请</div>
+        <div class="de1">3.POST类型API的请求内容提交方式</div>
+        <div class="de2">对于提交方式为POST的API，其请求内容统一在Http Body中以JSON格式提交。</div>
+        <div class="de2">下文对于API接口请求字段的说明，如无特殊标注，请求样例均为body中的json样式，字段说明均为对json中字段的具体描述。</div>
+        <div class="de2">无论get还是post请求，accessToken均在url中传入，而不包含在json中。</div>
+        <div class="de1">4.响应结果公共格式</div>
+        <div class="de2">鲸鱼API的响应结果均以JSON形式返回，且都为以下标准的结构：</div>
+        <div class="de3">字段名称&nbsp;&nbsp;字段说明</div>
+        <div class="de3">success&nbsp;&nbsp;&nbsp;是否成功返回，取值：true,false</div>
+        <div class="de3">code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;响应返回码，成功为10200，异常时参考各API的说明</div>
+        <div class="de3"> note&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提示信息，若success为false时一般为异常信息描述</div>
+        <div class="de3">data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;具体返回内容，各API会有自己的data结构定义，下文API说明中“响应结果”部分即是对data格式的说明，同时，下文的说明将不再重复描述公共的头部字段。</div>
+        <div class="de1">5.响应返回码</div>
+        <div class="de2">对于响应返回码，一般遵循以下约定：</div>
+        <div class="de3">返回码为5位数字</div>
+        <div class="de3">成功码为10200</div>
+        <div class="de3">公共异常返回码以2开头</div>
+        <div class="de3">各API个性化的返回码以4开头</div>
+        <div class="de1">下面列举所有的公共异常返回码：</div>
+        <div class="de2">20001&nbsp;&nbsp;&nbsp;&nbsp;未知错误</div>
+        <div class="de2">20002&nbsp;&nbsp;&nbsp;&nbsp;系统繁忙，稍后再试</div>
+        <div class="de2">20003&nbsp;&nbsp;&nbsp;&nbsp;accessToken无效或已超时</div>
+        <div class="de2">20004&nbsp;&nbsp;&nbsp;&nbsp;不存在的方法</div>
+        <div class="de2">20005&nbsp;&nbsp;&nbsp;&nbsp;缺少参数</div>
+        <div class="de2">20006&nbsp;&nbsp;&nbsp;&nbsp;系统维护中</div>
+        <div class="de2">20007&nbsp;&nbsp;&nbsp;&nbsp;流量限制，稍后再试</div>
+    </div>
+    <div class="detail" ng-if="current =='今日统计'">
+        <div id="echarts_API"></div>
+    </div>
+    <div class="detail" ng-if="current =='调用日志'">
+        <div class="API_order order440">
+            <ul class="order_title">
+                <li class="order_list1">错误码</li>
+                <li class="order_list2">说明</li>
+            </ul>
+            <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
+                <li class="order_list1">11</li>
+                <li class="order_list2">22</li>
+            </ul>
+        </div>
+    </div>
+</div>

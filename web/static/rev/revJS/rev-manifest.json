@@ -1,0 +1,16 @@
+{
+  "static/js/common/check.js": "static/js/common/check-ff8e13af0d.js",
+  "static/js/common/main.js": "static/js/common/main-07b957bd8d.js",
+  "static/js/controller.js": "static/js/controller-cccee3cf96.js",
+  "static/js/controller/CrawlerApply.js": "static/js/controller/CrawlerApply-367306cd7a.js",
+  "static/js/controller/directive.js": "static/js/controller/directive-7d78a685e6.js",
+  "static/js/controller/filter.js": "static/js/controller/filter-da5800312f.js",
+  "static/js/controller/history.js": "static/js/controller/history-46cefda12f.js",
+  "static/js/controller/home.js": "static/js/controller/home-3631d48ccd.js",
+  "static/js/controller/indexBig.js": "static/js/controller/indexBig-6c2f8cb17b.js",
+  "static/js/controller/overHead.js": "static/js/controller/overHead-b648a8b916.js",
+  "static/js/controller/overset.js": "static/js/controller/overset-b4810795ea.js",
+  "static/js/controller/overview.js": "static/js/controller/overview-aac5adbaa9.js",
+  "static/js/controller/result.js": "static/js/controller/result-556f072a22.js",
+  "static/js/controller/setup.js": "static/js/controller/setup-8b2294bd3a.js"
+}

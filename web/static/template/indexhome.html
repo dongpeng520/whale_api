@@ -1,0 +1,106 @@
+<div id="home1">
+    <div class="home_header">
+        <div class="layout">
+            <div class="logo">
+                <div class="logo_img">
+                    <img ng-src="static/img/whale.png" alt="">
+                </div>
+            </div>
+            <div class="login" ng-if="!username_flag">
+                <div class="login_img"><img src="static/img/login.png" alt=""></div>
+                <div class="login_name" ng-click="openlogin('login')"><a href="">登录</a></div>
+                <div class="login_img"><img src="static/img/login.png" alt=""></div>
+                <div class="login_name" ng-click="openlogin('register')"><a href="">注册</a></div>
+            </div>
+            <div class="username" ng-class="{'user_change':user_change}" ng-if="username_flag">
+                <div class="username_fun"><a href="" ng-click="Crawler_close()">用户中心</a></div>
+                <div class="username_img" ng-mouseleave="usernameenter(false)" ng-mouseenter="usernameenter(true)">
+                    <img src="static/img/user.png" alt="">
+                    <div class="username_xin">
+                        <div class="title">
+                            <div class="img">
+                                <img src="static/img/user.png" alt="">
+                            </div>
+                            <div class="name">
+                                <p class="p1" ng-bind="usercount.username"></p>
+                                <p class="p2">这是你使用鲸鱼的第{{usercount.time | timeout}}天</p>
+                            </div>
+                        </div>
+                        <div class="shuju">
+                            <div class="shuju1 bor mar">爬虫应用数<span>{{usercount.appcount}}</span></div>
+                            <div class="shuju1 mar">爬取数据量<span>{{usercount.totalCount |usercount_wan }}</span></div>
+                            <div class="shuju1 bor">爬虫节点数<span>{{usercount.crawlNum}}</span></div>
+                            <div class="shuju1">爬取总耗时<span>{{ usercount.costTime | changeKMG1}}</span></div>
+                            <!--<home-hours creattime="totaltime"></home-hours>-->
+                            <!--<home-kmg creattime="totaltime"></home-kmg>-->
+                            <!--<span>{{nnnnn | changeKMG1}}</span>-->
+                        </div>
+                        <div class="foo">
+                            <div class="foo_user" ng-click="Crawler_close()">用户中心</div>
+                            <div class="foo_out" ng-click="loginout()">退出</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contain">
+                <a ui-sref-active="active" ui-sref="index.indexhome">首页</a>
+                <a ui-sref-active="active" ui-sref="index.whalehome" href="">鲸鱼爬虫</a>
+                <!--<a ng-class="{active: $state.includes('index.whaleAPI')}" ui-sref="index.whaleAPI.API" href="">鲸鱼API</a>-->
+                <a ui-sref-active="active" ui-sref="index.whaleAPI" href="">鲸鱼API</a>
+                <a ui-sref-active="active" ui-sref="index.whaleAbout" href="">关于我们</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view></div>
+<div id="footer">
+    <div class="layout">
+        <div class="fot">Copyright © 2017 上海诚数信息科技有限公司版权所有 沪ICP备12010279号</div>
+    </div>
+</div>
+
+<!--选择爬虫应用-->
+<div ng-include="'CrawlerApply.html'" id="Crawler" ng-controller="CrawlerApplycontroller" ng-if="crawler_close"></div>
+
+<!--登录-->
+<div id="login" ng-if="openflag">
+    <div class="contain" ng-if="openflag_LR=='login'">
+        <a href="" ng-click="changeLR('register')">注册</a>
+        <div class="close"><span ng-click="closedlogin()">&times;</span></div>
+        <div class="title">登录</div>
+        <div class="input_name">
+            <input type="text" ng-model="loginInfo.name1" placeholder="邮箱" autofocus="autofocus">
+        </div>
+        <div class="input_password">
+            <input type="password" ng-model="loginInfo.password1" placeholder="密码">
+        </div>
+        <div class="login_error" ng-if="error">{{error_wenzi}}</div>
+        <div class="submit" ng-click="submitlogin()">登录</div>
+    </div>
+    <div class="contain" ng-if="openflag_LR=='register'">
+        <a href="" ng-click="changeLR('login')">登录</a>
+        <div class="close"><span ng-click="closedlogin()">&times;</span></div>
+        <div class="title">注册</div>
+        <div class="input_name">
+            <input type="text" ng-model="registerInfo.email" placeholder="请输入邮箱" autofocus="autofocus">
+        </div>
+        <div class="input_name">
+            <input type="text" ng-model="registerInfo.name" placeholder="请输入用户名" autofocus="autofocus">
+        </div>
+        <div class="input_phone">
+            <input type="text" ng-model="registerInfo.phone" placeholder="请输入你的手机号">
+        </div>
+        <div class="input_YZM">
+            <input type="text" ng-model="registerInfo.YZM" placeholder="短信验证码">
+            <span id="registerYZM" ng-click="registerYZM()">获取验证码</span>
+        </div>
+        <div class="input_password">
+            <input type="password" ng-model="registerInfo.password" placeholder="6-18位数字与字母组合的密码">
+        </div>
+        <div class="input_password">
+            <input type="password" ng-model="registerInfo.repassword" placeholder="确认密码">
+        </div>
+        <div class="login_error" ng-if="error">{{error_wenzi}}</div>
+        <div class="submit" ng-click="submitregister()">注册</div>
+    </div>
+</div>

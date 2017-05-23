@@ -1,0 +1,477 @@
+#main1 {
+  width: 100%;
+  min-height: 1234px;
+  background: url("../img/index_whale.png") no-repeat center;
+  background-size: cover; }
+
+#main2 {
+  margin: 10px 0;
+  overflow: hidden; }
+  #main2 .m {
+    width: 28%;
+    float: left;
+    height: 230px;
+    margin-right: 8px;
+    background-size: cover;
+    position: relative;
+    cursor: pointer; }
+  #main2 .m2 {
+    margin-left: 8px;
+    background: url("../img/qiuzuo.png") no-repeat center;
+    background-size: cover; }
+  #main2 .m3 {
+    background: url("../img/qiumiddle.png") no-repeat center;
+    background-size: cover; }
+  #main2 .m4 {
+    background: url("../img/qiuyou.png") no-repeat center;
+    background-size: cover; }
+  #main2 .con {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%); }
+    #main2 .con .d1 {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 38px;
+      margin-bottom: 22px; }
+    #main2 .con .d2 {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 26px; }
+  #main2 .m1 {
+    float: left;
+    background: #08152a;
+    width: calc(8% - 16px);
+    width: -moz-calc(8% - 16px);
+    width: -webkit-calc(8% - 16px);
+    height: 230px; }
+  #main2 .m5 {
+    float: right;
+    width: calc(8% - 16px);
+    width: -moz-calc(8% - 16px);
+    width: -webkit-calc(8% - 16px); }
+
+#aboutus {
+  width: 100%;
+  height: 1080px;
+  background: url("../img/aboutus.png") no-repeat center;
+  background-size: cover;
+  position: relative; }
+  #aboutus .about {
+    position: absolute;
+    left: 50%;
+    margin-left: -227px;
+    top: 320px; }
+    #aboutus .about .about1 {
+      width: 454px;
+      height: 75px;
+      background: url("../img/aboutus1.png") no-repeat center;
+      margin-bottom: 20px; }
+    #aboutus .about .about2 {
+      width: 454px; }
+      #aboutus .about .about2 p {
+        margin: 0;
+        font-size: 14px;
+        color: #5b5b5b;
+        text-indent: 25px; }
+
+#whaleAPI {
+  width: 100%;
+  background: #e2e5ec;
+  padding-top: 20px;
+  position: relative; }
+  #whaleAPI .whaleAPI {
+    min-height: 1000px; }
+    #whaleAPI .whaleAPI .API {
+      overflow: hidden;
+      margin-bottom: 20px; }
+      #whaleAPI .whaleAPI .API .API_zuo {
+        width: 285px;
+        height: 410px;
+        float: left;
+        background: #fff;
+        position: relative; }
+        #whaleAPI .whaleAPI .API .API_zuo .contain {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -o-transform: translateY(-50%); }
+          #whaleAPI .whaleAPI .API .API_zuo .contain .div1 {
+            width: 145px;
+            height: 93px;
+            margin: 0 auto;
+            position: relative; }
+            #whaleAPI .whaleAPI .API .API_zuo .contain .div1 img {
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              bottom: 0px;
+              margin: auto;
+              display: block; }
+          #whaleAPI .whaleAPI .API .API_zuo .contain .div2 {
+            margin: 20px 0 10px;
+            text-align: center;
+            color: #204068;
+            font-size: 30px; }
+          #whaleAPI .whaleAPI .API .API_zuo .contain .div3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #204068;
+            font-size: 14px; }
+          #whaleAPI .whaleAPI .API .API_zuo .contain .div4 {
+            margin: 0 auto;
+            width: 75px;
+            color: #ff7300;
+            font-size: 14px;
+            cursor: pointer;
+            background: url("../img/doublearrow.png") no-repeat right center; }
+      #whaleAPI .whaleAPI .API .API_you {
+        width: 861px;
+        height: 410px;
+        float: right;
+        background: #fff;
+        overflow-y: auto;
+        overflow-x: hidden; }
+        #whaleAPI .whaleAPI .API .API_you .contain {
+          width: 277px;
+          height: 200px;
+          position: relative;
+          float: left; }
+          #whaleAPI .whaleAPI .API .API_you .contain .contain1 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -o-transform: translateY(-50%); }
+            #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div1 {
+              width: 56px;
+              height: 56px;
+              margin: 0 auto;
+              position: relative; }
+              #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div1 img {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                margin: auto;
+                display: block; }
+            #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div2 {
+              margin: 10px 0 5px;
+              text-align: center;
+              color: #464646;
+              font-size: 14px; }
+            #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div3 {
+              margin-bottom: 10px;
+              text-align: center;
+              color: #999999;
+              font-size: 14px; }
+            #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div4 {
+              margin: 0 auto;
+              width: 80px;
+              text-align: center;
+              color: #ff7300;
+              font-size: 14px;
+              border: 1px solid #ffa06b;
+              border-radius: 4px;
+              cursor: pointer; }
+
+#classify {
+  width: 100%;
+  background: #e2e5ec;
+  padding-top: 20px;
+  position: relative; }
+  #classify .classify .classify_title {
+    height: 50px;
+    border-bottom: 1px solid #bbbbbb; }
+    #classify .classify .classify_title .categoryActive {
+      border-bottom: 2px solid #1085e4; }
+    #classify .classify .classify_title .sele {
+      width: 104px;
+      height: 50px;
+      font-size: 14px;
+      color: #5b5b5b;
+      line-height: 50px;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer; }
+  #classify .classify .classify_contain {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    #classify .classify .classify_contain .contain_class {
+      overflow: hidden;
+      min-height: 600px; }
+      #classify .classify .classify_contain .contain_class .zeromargin {
+        margin-right: 0; }
+      #classify .classify .classify_contain .contain_class .contain {
+        width: 224px;
+        height: 200px;
+        position: relative;
+        background: #fff;
+        float: left;
+        margin: 0px 10px 10px 0; }
+        #classify .classify .classify_contain .contain_class .contain .contain1 {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -o-transform: translateY(-50%); }
+          #classify .classify .classify_contain .contain_class .contain .contain1 .div1 {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto;
+            position: relative; }
+            #classify .classify .classify_contain .contain_class .contain .contain1 .div1 img {
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              bottom: 0px;
+              margin: auto;
+              display: block; }
+          #classify .classify .classify_contain .contain_class .contain .contain1 .div2 {
+            margin: 10px 0 5px;
+            text-align: center;
+            color: #464646;
+            font-size: 14px; }
+          #classify .classify .classify_contain .contain_class .contain .contain1 .div3 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #999999;
+            font-size: 14px; }
+          #classify .classify .classify_contain .contain_class .contain .contain1 .div4 {
+            margin: 0 auto;
+            width: 96px;
+            height: 27px;
+            line-height: 27px;
+            text-align: center;
+            color: #ff7300;
+            border: 1px solid #ff7300;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer; }
+    #classify .classify .classify_contain .page_foo {
+      margin: 20px auto;
+      overflow: hidden;
+      width: 450px; }
+
+.API_order {
+  position: relative;
+  border: 1px solid #ecedee; }
+  .API_order .order_list1 {
+    width: 220px;
+    border-right: 1px solid #ecedee; }
+  .API_order .order_list2 {
+    width: 220px;
+    border-right: 1px solid #ecedee; }
+  .API_order .order_list3 {
+    width: 150px;
+    border-right: 1px solid #ecedee; }
+  .API_order .order_list4 {
+    width: 150px;
+    border-right: 1px solid #ecedee; }
+  .API_order .order_list5 {
+    width: 150px; }
+  .API_order .order_title {
+    background: #fafafa;
+    overflow: hidden;
+    clear: both; }
+    .API_order .order_title li {
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      text-align: center;
+      font-size: 14px;
+      color: #464646; }
+  .API_order .order_list {
+    overflow: hidden;
+    clear: both; }
+    .API_order .order_list li {
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      text-align: center;
+      font-size: 14px;
+      color: #464646; }
+  .API_order .order_listeven {
+    background: #fcfdff; }
+  .API_order .order_listodd {
+    background: #ffffff; }
+
+.order590 {
+  width: 600px; }
+
+.order440 {
+  width: 445px;
+  position: relative;
+  border: 1px solid #ecedee; }
+  .order440 .order_list2 {
+    border-right: 0; }
+
+#APIdetail {
+  width: 100%;
+  background: #e2e5ec;
+  padding-top: 20px;
+  position: relative; }
+  #APIdetail .APIdetail .APIdetail1 {
+    margin-bottom: 20px;
+    height: 273px;
+    padding: 50px 50px 20px 50px;
+    background: #fff; }
+    #APIdetail .APIdetail .APIdetail1 .API_zuo {
+      width: 224px;
+      height: 200px;
+      float: left;
+      background: #fff;
+      position: relative; }
+      #APIdetail .APIdetail .APIdetail1 .API_zuo .contain {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%); }
+        #APIdetail .APIdetail .APIdetail1 .API_zuo .contain .div1 {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+          position: relative; }
+          #APIdetail .APIdetail .APIdetail1 .API_zuo .contain .div1 img {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            display: block; }
+        #APIdetail .APIdetail .APIdetail1 .API_zuo .contain .div2 {
+          margin: 20px 0 0px 0;
+          text-align: center;
+          color: #464646;
+          font-size: 14px; }
+    #APIdetail .APIdetail .APIdetail1 .API_you {
+      width: 564px;
+      height: 203px;
+      float: left;
+      margin-left: 30px;
+      position: relative; }
+      #APIdetail .APIdetail .APIdetail1 .API_you .you1 {
+        color: #464646;
+        font-size: 20px; }
+      #APIdetail .APIdetail .APIdetail1 .API_you .you2 {
+        color: #666;
+        font-size: 14px;
+        margin-top: 20px; }
+      #APIdetail .APIdetail .APIdetail1 .API_you .you3 {
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+        #APIdetail .APIdetail .APIdetail1 .API_you .you3 span {
+          display: inline-block;
+          width: 140px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          text-align: center;
+          margin-right: 20px;
+          border: 1px solid #ff7300;
+          border-radius: 5px;
+          cursor: pointer; }
+        #APIdetail .APIdetail .APIdetail1 .API_you .you3 .span1 {
+          color: #ff7300; }
+        #APIdetail .APIdetail .APIdetail1 .API_you .you3 .span2 {
+          color: #fff;
+          background: #ff7300; }
+  #APIdetail .APIdetail .APIdetail2 {
+    background: #fff; }
+    #APIdetail .APIdetail .APIdetail2 .APIdetail2_title {
+      height: 50px;
+      border-bottom: 1px solid #bbbbbb; }
+      #APIdetail .APIdetail .APIdetail2 .APIdetail2_title .categoryActive {
+        border-bottom: 2px solid #1085e4; }
+      #APIdetail .APIdetail .APIdetail2 .APIdetail2_title .sele {
+        width: 158px;
+        height: 50px;
+        font-size: 14px;
+        color: #5b5b5b;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer; }
+    #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain {
+      min-height: 500px;
+      padding: 30px 0 30px 50px;
+      position: relative; }
+      #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail {
+        overflow: hidden; }
+        #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail1 {
+          width: 180px;
+          float: left;
+          color: #1085e4;
+          font-size: 14px; }
+        #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 {
+          width: 920px;
+          padding-left: 20px;
+          min-height: 400px;
+          float: left;
+          border-left: 1px solid #ccc;
+          color: #464646;
+          font-size: 14px; }
+          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d1 {
+            margin-bottom: 10px; }
+            #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d1 span {
+              display: inline-block;
+              width: 100px;
+              height: 26px;
+              line-height: 26px;
+              border-radius: 5px;
+              color: #fff;
+              background: #1085e4;
+              text-align: center; }
+          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d2 {
+            margin: 20px 0 10px 0;
+            font-size: 20px; }
+          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain {
+            height: 560px;
+            border: 1px solid #c9c9c9;
+            overflow-y: auto;
+            overflow-x: hidden; }
+            #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre {
+              background-color: #fff;
+              font-size: 14px;
+              border: 0;
+              color: #464646;
+              line-height: 3; }
+              #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview .prop {
+                color: #464646;
+                font-size: 16px; }
+              #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview ul {
+                list-style: none;
+                margin: 0 0 0 2em !important;
+                padding: 0; }
+  #APIdetail .de1 {
+    color: #464646;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 700; }
+  #APIdetail .de2 {
+    color: #464646;
+    font-size: 14px;
+    text-indent: 25px; }
+  #APIdetail .de3 {
+    color: #464646;
+    font-size: 14px;
+    text-indent: 54px; }
+
+/*# sourceMappingURL=indexhome.css.map */

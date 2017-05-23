@@ -1,0 +1,14 @@
+<div id="classify">
+    <div class="classify layout">
+        <div class="classify_title">
+            <div class="sele" ng-click="selectCategory('')" ng-class="{'categoryActive':current === '全部分类'}">全部分类</div>
+            <div class="sele" ng-repeat="a in DataCategory track by $index" ng-click="selectCategory(a.categroy)" ng-class="{'categoryActive':current === a.categroy.categroyName}">{{a.categroy.categroyName}}</div>
+        </div>
+        <div class="classify_contain">
+            <order-classify></order-classify>
+            <div class="page_foo">
+                <historytaskpage-middle></historytaskpage-middle>
+            </div>
+        </div>
+    </div>
+</div>

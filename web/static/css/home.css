@@ -1,0 +1,756 @@
+#home1 {
+  width: 100%;
+  height: 80px;
+  background: #204068; }
+  #home1 .home_header {
+    height: 80px;
+    box-sizing: border-box; }
+    #home1 .home_header .logo {
+      float: left;
+      width: 240px;
+      margin-top: 25px; }
+      #home1 .home_header .logo .logo_img {
+        display: inline-block; }
+        #home1 .home_header .logo .logo_img img {
+          width: 100%;
+          height: 30px; }
+      #home1 .home_header .logo .logo_der {
+        display: inline-block; }
+        #home1 .home_header .logo .logo_der p {
+          color: #d8d8d8; }
+          #home1 .home_header .logo .logo_der p.p1 {
+            font-size: 17px;
+            height: 18px;
+            line-height: 15px; }
+          #home1 .home_header .logo .logo_der p.p2 {
+            font-size: 12px;
+            height: 13px;
+            line-height: 13px; }
+    #home1 .home_header .contain {
+      float: right;
+      margin-right: 70px; }
+      #home1 .home_header .contain a {
+        display: inline-block;
+        height: 80px;
+        font-size: 16px;
+        line-height: 80px;
+        padding: 0 20px;
+        text-align: center;
+        color: #fff; }
+        #home1 .home_header .contain a:hover {
+          color: #1085e4;
+          font-size: 16px; }
+        #home1 .home_header .contain a.active {
+          color: #1085e4;
+          font-size: 16px; }
+    #home1 .home_header .login {
+      float: right;
+      width: 115px;
+      height: 32px;
+      margin-top: 30px; }
+      #home1 .home_header .login .login_img {
+        display: inline-block; }
+      #home1 .home_header .login .login_name {
+        margin-left: 4px;
+        display: inline-block; }
+        #home1 .home_header .login .login_name a {
+          color: #d8d8d8;
+          font-size: 15px;
+          height: 18px;
+          line-height: 18px;
+          text-decoration: none; }
+    #home1 .home_header .user_change .username_img {
+      background: #0d3b76; }
+    #home1 .home_header .user_change .username_xin {
+      display: block !important; }
+    #home1 .home_header .username {
+      float: right;
+      width: 200px; }
+      #home1 .home_header .username .username_fun {
+        display: block;
+        margin-right: 10px;
+        float: left; }
+        #home1 .home_header .username .username_fun a {
+          display: block;
+          width: 80px;
+          color: #d8d8d8;
+          font-size: 14px;
+          height: 80px;
+          line-height: 80px;
+          text-decoration: none; }
+      #home1 .home_header .username .username_img {
+        float: left;
+        width: 80px;
+        height: 80px;
+        position: relative; }
+        #home1 .home_header .username .username_img img {
+          display: block;
+          margin: auto;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0; }
+        #home1 .home_header .username .username_img .username_xin {
+          display: none;
+          width: 300px;
+          position: absolute;
+          top: 80px;
+          right: 0px;
+          background: #000;
+          z-index: 2; }
+          #home1 .home_header .username .username_img .username_xin .title {
+            width: 100%;
+            background: #262c30;
+            height: 90px; }
+            #home1 .home_header .username .username_img .username_xin .title .img {
+              width: 82px;
+              height: 90px;
+              position: relative;
+              float: left; }
+            #home1 .home_header .username .username_img .username_xin .title .name {
+              padding-top: 20px;
+              float: left; }
+              #home1 .home_header .username .username_img .username_xin .title .name .p1 {
+                font-size: 18px;
+                color: #fff;
+                margin-bottom: 10px;
+                width: 200px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis; }
+              #home1 .home_header .username .username_img .username_xin .title .name .p2 {
+                font-size: 12px;
+                color: #fff;
+                margin: 0; }
+          #home1 .home_header .username .username_img .username_xin .shuju {
+            padding: 10px 0;
+            overflow: hidden;
+            clear: both; }
+            #home1 .home_header .username .username_img .username_xin .shuju .bor {
+              border-right: 1px solid #484848;
+              width: 45% !important; }
+            #home1 .home_header .username .username_img .username_xin .shuju .mar {
+              margin-bottom: 5px; }
+            #home1 .home_header .username .username_img .username_xin .shuju .shuju1 {
+              color: #fff;
+              width: 55%;
+              text-align: center;
+              float: left;
+              font-size: 12px; }
+              #home1 .home_header .username .username_img .username_xin .shuju .shuju1 span {
+                font-size: 18px;
+                color: #fff;
+                margin-left: 5px; }
+          #home1 .home_header .username .username_img .username_xin .foo {
+            width: 90%;
+            margin: 0px auto;
+            overflow: hidden;
+            clear: both;
+            color: #999999;
+            font-size: 12px;
+            padding: 10px 0 20px;
+            border-top: 1px solid #484848; }
+            #home1 .home_header .username .username_img .username_xin .foo .foo_user {
+              float: left;
+              height: 20px;
+              line-height: 20px;
+              cursor: pointer; }
+            #home1 .home_header .username .username_img .username_xin .foo .foo_out {
+              float: right;
+              text-align: right;
+              height: 20px;
+              line-height: 20px;
+              cursor: pointer; }
+
+#home11 {
+  width: 100%;
+  height: 721px;
+  background: url(../img/banner.png) no-repeat center;
+  background-size: cover;
+  padding-top: 80px; }
+  #home11 .home_content_middle {
+    padding: 0 65px; }
+    #home11 .home_content_middle .middle1 {
+      color: #fff;
+      font-size: 46px;
+      margin-bottom: 37px;
+      font-family: 'FZCQJW'; }
+    #home11 .home_content_middle .middle2 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 78px; }
+    #home11 .home_content_middle .middle3 .btnone {
+      width: 230px;
+      height: 47px;
+      line-height: 47px;
+      text-align: center;
+      color: #0d3871;
+      font-size: 20px;
+      background: #dde4ee;
+      border-radius: 4px;
+      cursor: pointer; }
+
+#home2 {
+  width: 100%;
+  background: #fff; }
+  #home2 .title {
+    font-size: 45px;
+    color: #464646;
+    text-align: center;
+    margin-bottom: 84px; }
+  #home2 .home2_contain1 {
+    height: 130px;
+    background: url(../img/solid1.png) no-repeat center; }
+  #home2 .home2_contain2 {
+    height: 682px;
+    background: url(../img/solid2.png) no-repeat center;
+    position: relative; }
+    #home2 .home2_contain2 .title {
+      font-size: 46px;
+      color: #464646;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -60px;
+      margin-left: -110px; }
+    #home2 .home2_contain2 .home21 {
+      position: absolute;
+      top: 73%;
+      left: 22%; }
+      #home2 .home2_contain2 .home21:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home21:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home21 .home21_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home21 .home21_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: -30px;
+        right: -50px; }
+        #home2 .home2_contain2 .home21 .home21_2 .home21_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+    #home2 .home2_contain2 .home22 {
+      position: absolute;
+      top: 36%;
+      left: 5%; }
+      #home2 .home2_contain2 .home22:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home22:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home22 .home22_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home22 .home22_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: -18px;
+        right: -78px; }
+        #home2 .home2_contain2 .home22 .home22_2 .home22_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+    #home2 .home2_contain2 .home23 {
+      position: absolute;
+      top: 17%;
+      left: 31%; }
+      #home2 .home2_contain2 .home23:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home23:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home23 .home23_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home23 .home23_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: -72px;
+        right: 42px; }
+        #home2 .home2_contain2 .home23 .home23_2 .home23_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+    #home2 .home2_contain2 .home24 {
+      position: absolute;
+      top: -5%;
+      left: 57%; }
+      #home2 .home2_contain2 .home24:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home24:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home24 .home24_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home24 .home24_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: 3px;
+        right: -78px; }
+        #home2 .home2_contain2 .home24 .home24_2 .home24_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+    #home2 .home2_contain2 .home25 {
+      position: absolute;
+      top: 40%;
+      left: 93%;
+      width: 200px; }
+      #home2 .home2_contain2 .home25:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home25:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home25 .home25_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home25 .home25_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: -18px;
+        left: -82px; }
+        #home2 .home2_contain2 .home25 .home25_2 .home25_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+    #home2 .home2_contain2 .home26 {
+      position: absolute;
+      top: 76%;
+      left: 73%; }
+      #home2 .home2_contain2 .home26:hover .hover {
+        color: #1085e4; }
+      #home2 .home2_contain2 .home26:hover .hover_bg {
+        background: #1085e4; }
+      #home2 .home2_contain2 .home26 .home26_1 {
+        font-size: 26px;
+        color: #5b5b5b; }
+      #home2 .home2_contain2 .home26 .home26_2 {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        top: -18px;
+        right: -78px; }
+        #home2 .home2_contain2 .home26 .home26_2 .home26_21 {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
+  #home2 .home2_contain3 {
+    width: 100%;
+    background: #f1f8fe;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    #home2 .home2_contain3 .title {
+      text-align: center;
+      font-size: 45px;
+      color: #464646;
+      margin-bottom: 84px; }
+    #home2 .home2_contain3 .contain {
+      margin-bottom: 90px; }
+      #home2 .home2_contain3 .contain .wenzi {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%); }
+        #home2 .home2_contain3 .contain .wenzi p {
+          text-align: center;
+          font-size: 30px;
+          color: #fff; }
+      #home2 .home2_contain3 .contain .contain1 {
+        width: 300px;
+        height: 336px;
+        position: relative;
+        display: inline-block;
+        margin-left: 50px; }
+        #home2 .home2_contain3 .contain .contain1:hover .hexagon-in2 {
+          background: #1085e4; }
+        #home2 .home2_contain3 .contain .contain1 .hexagon-in2 {
+          background: url(../img/buy1.png) no-repeat center; }
+      #home2 .home2_contain3 .contain .contain2 {
+        width: 300px;
+        height: 336px;
+        position: relative;
+        display: inline-block;
+        margin-left: 80px; }
+        #home2 .home2_contain3 .contain .contain2:hover .hexagon-in2 {
+          background: #1085e4; }
+        #home2 .home2_contain3 .contain .contain2 .hexagon-in2 {
+          background: url(../img/buy3.png) no-repeat center; }
+      #home2 .home2_contain3 .contain .contain3 {
+        width: 300px;
+        height: 336px;
+        position: relative;
+        display: inline-block;
+        margin-left: 80px; }
+        #home2 .home2_contain3 .contain .contain3:hover .hexagon-in2 {
+          background: #1085e4; }
+        #home2 .home2_contain3 .contain .contain3 .hexagon-in2 {
+          background: url(../img/buy2.png) no-repeat center; }
+    #home2 .home2_contain3 .foo {
+      width: 100%;
+      overflow: hidden;
+      clear: both; }
+      #home2 .home2_contain3 .foo .ff {
+        width: 247px;
+        float: left;
+        margin-left: 48px; }
+      #home2 .home2_contain3 .foo .foo_title {
+        text-align: center;
+        font-size: 22px;
+        color: #006dcc;
+        margin-bottom: 15px; }
+        #home2 .home2_contain3 .foo .foo_title img {
+          position: relative;
+          top: 7px; }
+      #home2 .home2_contain3 .foo .url a {
+        font-size: 20px;
+        color: #666666;
+        text-decoration: none;
+        display: inline-block;
+        width: 55px;
+        border-right: 2px solid #666666;
+        text-align: center; }
+        #home2 .home2_contain3 .foo .url a.last {
+          border-right: none; }
+        #home2 .home2_contain3 .foo .url a.lastlast {
+          text-align: right;
+          width: 60px; }
+      #home2 .home2_contain3 .foo .url .url1 {
+        margin-bottom: 5px; }
+      #home2 .home2_contain3 .foo .foo1 {
+        margin-left: 0px; }
+  #home2 .home2_contain4 {
+    overflow: hidden;
+    clear: both;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    #home2 .home2_contain4 .a2 {
+      width: 100%; }
+      #home2 .home2_contain4 .a2 .p1 {
+        text-align: center;
+        font-size: 30px;
+        color: #464646;
+        margin: 10px auto 20px; }
+      #home2 .home2_contain4 .a2 .p2 {
+        width: 179px;
+        text-align: center;
+        font-size: 14px;
+        color: #464646;
+        margin: 0px auto; }
+    #home2 .home2_contain4 .tu {
+      width: 214px;
+      float: left;
+      margin-right: 102px; }
+    #home2 .home2_contain4 .contain1 .a1 {
+      width: 214px;
+      height: 214px;
+      border-radius: 50%;
+      background: url(../img/tech11.png) no-repeat center; }
+      #home2 .home2_contain4 .contain1 .a1:hover {
+        background: url(../img/tech1.png) no-repeat center; }
+    #home2 .home2_contain4 .contain2 .a1 {
+      width: 214px;
+      height: 214px;
+      border-radius: 50%;
+      background: url(../img/tech22.png) no-repeat center; }
+      #home2 .home2_contain4 .contain2 .a1:hover {
+        background: url(../img/tech2.png) no-repeat center; }
+    #home2 .home2_contain4 .contain3 .a1 {
+      width: 214px;
+      height: 214px;
+      border-radius: 50%;
+      background: url(../img/tech33.png) no-repeat center; }
+      #home2 .home2_contain4 .contain3 .a1:hover {
+        background: url(../img/tech3.png) no-repeat center; }
+    #home2 .home2_contain4 .contain4 {
+      margin-right: 0px; }
+      #home2 .home2_contain4 .contain4 .a1 {
+        width: 214px;
+        height: 214px;
+        border-radius: 50%;
+        background: url(../img/tech44.png) no-repeat center; }
+        #home2 .home2_contain4 .contain4 .a1:hover {
+          background: url(../img/tech4.png) no-repeat center; }
+  #home2 .home2_contain5 {
+    background: #f1f8fe;
+    padding: 100px 0; }
+    #home2 .home2_contain5 .wenzi {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -o-transform: translateY(-50%); }
+      #home2 .home2_contain5 .wenzi p {
+        text-align: center;
+        font-size: 30px;
+        color: #fff; }
+    #home2 .home2_contain5 .common {
+      width: 171px;
+      height: 192px;
+      position: relative;
+      display: inline-block;
+      margin-right: 70px; }
+    #home2 .home2_contain5 .contain1 {
+      width: 930px;
+      margin: 0px auto; }
+      #home2 .home2_contain5 .contain1 .contain11:hover .hexagon-in2 {
+        background: #1085e4; }
+      #home2 .home2_contain5 .contain1 .contain11 .hexagon-in2 {
+        background: url(../img/see1.png) no-repeat center; }
+      #home2 .home2_contain5 .contain1 .contain12:hover .hexagon-in2 {
+        background: #1085e4; }
+      #home2 .home2_contain5 .contain1 .contain12 .hexagon-in2 {
+        background: url(../img/see2.png) no-repeat center; }
+      #home2 .home2_contain5 .contain1 .contain13:hover .hexagon-in2 {
+        background: #1085e4; }
+      #home2 .home2_contain5 .contain1 .contain13 .hexagon-in2 {
+        background: url(../img/see3.png) no-repeat center; }
+      #home2 .home2_contain5 .contain1 .contain14 {
+        margin-right: 0px; }
+        #home2 .home2_contain5 .contain1 .contain14:hover .hexagon-in2 {
+          background: #1085e4; }
+        #home2 .home2_contain5 .contain1 .contain14 .hexagon-in2 {
+          background: url(../img/see4.png) no-repeat center; }
+    #home2 .home2_contain5 .contain2 {
+      width: 675px;
+      margin: 0px auto; }
+      #home2 .home2_contain5 .contain2 .contain11:hover .hexagon-in2 {
+        background: #1085e4; }
+      #home2 .home2_contain5 .contain2 .contain11 .hexagon-in2 {
+        background: url(../img/see5.png) no-repeat center; }
+      #home2 .home2_contain5 .contain2 .contain12:hover .hexagon-in2 {
+        background: #1085e4; }
+      #home2 .home2_contain5 .contain2 .contain12 .hexagon-in2 {
+        background: url(../img/see6.png) no-repeat center; }
+      #home2 .home2_contain5 .contain2 .contain13 {
+        margin-right: 0px; }
+        #home2 .home2_contain5 .contain2 .contain13:hover .hexagon-in2 {
+          background: #1085e4; }
+        #home2 .home2_contain5 .contain2 .contain13 .hexagon-in2 {
+          background: url(../img/see7.png) no-repeat center; }
+  #home2 .home2_contain6 {
+    padding: 100px 0;
+    overflow: hidden;
+    clear: both; }
+    #home2 .home2_contain6 .title {
+      text-align: left; }
+    #home2 .home2_contain6 .contain1 {
+      width: 420px;
+      float: left; }
+      #home2 .home2_contain6 .contain1 .con {
+        padding-left: 80px;
+        height: 62px;
+        line-height: 62px;
+        font-size: 30px;
+        color: #464646;
+        margin-bottom: 20px; }
+        #home2 .home2_contain6 .contain1 .con span {
+          color: #1085e4; }
+      #home2 .home2_contain6 .contain1 .con1 {
+        background: url(../img/fun1.png) no-repeat left; }
+      #home2 .home2_contain6 .contain1 .con2 {
+        background: url(../img/fun2.png) no-repeat left; }
+      #home2 .home2_contain6 .contain1 .con3 {
+        background: url(../img/fun3.png) no-repeat left; }
+      #home2 .home2_contain6 .contain1 .con4 {
+        background: url(../img/fun4.png) no-repeat left; }
+    #home2 .home2_contain6 .contain2 {
+      width: 555px;
+      float: right;
+      height: 555px;
+      background: url(../img/free.png) no-repeat center; }
+  #home2 .home2_contain7 {
+    background: #f1f8fe;
+    padding: 56px 0; }
+    #home2 .home2_contain7 .contain {
+      width: 1000px;
+      margin: 0px auto;
+      padding: 10px;
+      overflow: hidden;
+      clear: both; }
+      #home2 .home2_contain7 .contain .contain1 {
+        width: 450px;
+        padding-top: 50px;
+        float: left; }
+        #home2 .home2_contain7 .contain .contain1:hover {
+          box-shadow: 0px 0px 10px #cde0ee; }
+        #home2 .home2_contain7 .contain .contain1 .con1 {
+          width: 228px;
+          height: 255px;
+          margin: 0px auto; }
+          #home2 .home2_contain7 .contain .contain1 .con1 .hexagon-in2 {
+            background: url(../img/exm1.png) no-repeat center; }
+        #home2 .home2_contain7 .contain .contain1 .con2 {
+          margin: 30px 0;
+          text-align: center;
+          font-size: 30px;
+          height: 30px;
+          line-height: 30px;
+          color: #464646; }
+        #home2 .home2_contain7 .contain .contain1 .con3 {
+          width: 322px;
+          margin: 0px auto;
+          text-align: center;
+          font-size: 14px;
+          color: #464646;
+          margin-bottom: 40px; }
+        #home2 .home2_contain7 .contain .contain1 .con4 {
+          width: 90px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          margin: 0px auto;
+          background: #1085e4;
+          font-size: 14px;
+          color: #fff;
+          border-radius: 4px;
+          margin-bottom: 58px;
+          cursor: pointer; }
+      #home2 .home2_contain7 .contain .contain2 {
+        width: 450px;
+        float: right; }
+        #home2 .home2_contain7 .contain .contain2 .con1 .hexagon-in2 {
+          background: url(../img/exm2.png) no-repeat center; }
+  #home2 .home2_contain8 {
+    padding: 100px 0; }
+    #home2 .home2_contain8 .contain img {
+      margin: 0 auto;
+      height: 50px; }
+
+#footer {
+  background: #e2e5e4; }
+  #footer .fot {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #0447a4;
+    text-align: center; }
+
+#login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); }
+  #login .contain {
+    width: 500px;
+    margin: auto;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -250px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    padding: 24px 40px 40px;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    #login .contain a {
+      font-size: 16px; }
+    #login .contain .close {
+      font-size: 25px; }
+    #login .contain .title {
+      text-align: center;
+      font-size: 30px;
+      height: 30px;
+      line-height: 30px;
+      color: #4b5861;
+      margin-bottom: 50px; }
+    #login .contain .input_name {
+      width: 350px;
+      margin: 0px auto 30px;
+      background: #f9f9f9; }
+      #login .contain .input_name input {
+        width: 100%;
+        height: 37px;
+        padding-left: 20px;
+        font-size: 14px;
+        border: 1px solid #dfdfdf;
+        border-radius: 4px; }
+        #login .contain .input_name input:focus {
+          border: 1px solid #28b0f8; }
+    #login .contain .input_phone {
+      width: 350px;
+      margin: 0px auto 30px;
+      background: #f9f9f9; }
+      #login .contain .input_phone input {
+        width: 100%;
+        height: 37px;
+        padding-left: 20px;
+        font-size: 14px;
+        border: 1px solid #dfdfdf;
+        border-radius: 4px; }
+        #login .contain .input_phone input:focus {
+          border: 1px solid #28b0f8; }
+    #login .contain .input_YZM {
+      width: 350px;
+      margin: 0px auto 30px; }
+      #login .contain .input_YZM input {
+        width: 215px;
+        height: 37px;
+        padding-left: 20px;
+        font-size: 14px;
+        border: 1px solid #dfdfdf;
+        border-radius: 4px; }
+        #login .contain .input_YZM input:focus {
+          border: 1px solid #28b0f8; }
+      #login .contain .input_YZM span {
+        display: inline-block;
+        width: 115px;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-left: 15px;
+        border: 1px solid #dfdfdf; }
+    #login .contain .input_password {
+      width: 350px;
+      margin: 0px auto 30px; }
+      #login .contain .input_password input {
+        width: 100%;
+        height: 37px;
+        padding-left: 20px;
+        font-size: 14px;
+        border: 1px solid #dfdfdf;
+        border-radius: 4px; }
+        #login .contain .input_password input:focus {
+          border: 1px solid #28b0f8; }
+    #login .contain .login_error {
+      width: 350px;
+      margin: 0px auto 15px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #e87171;
+      font-size: 14px;
+      background: #f2dedf;
+      border-radius: 4px; }
+    #login .contain .submit {
+      width: 350px;
+      margin: 0px auto;
+      height: 40px;
+      background: #1085e4;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 4px; }
+
+/*# sourceMappingURL=home.css.map */
