@@ -1,0 +1,16 @@
+<div class="buyRecord">
+    <div class="APItitle">购买记录明细</div>
+    <div class="contain1">
+        购买时间
+        <span ng-repeat="data in DataCategory1" ng-class="{'spanblue':current1 === data}" ng-click="changeDataCategory1(data)">{{data}}</span>
+
+    </div>
+    <div class="contain2">
+        购买状态
+        <span ng-repeat="data in DataCategory2" ng-class="{'spanblue':current2 === data}" ng-click="changeDataCategory2(data)">{{data}}</span>
+    </div>
+    <record-list></record-list>
+    <div class="page_foo">
+        <historytaskpage-middle></historytaskpage-middle>
+    </div>
+</div>

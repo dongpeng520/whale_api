@@ -1,60 +1,64 @@
-<div class="APItitle">鲸鱼智能API概览</div>
-<div class="contain1">
-    <div class="con">
-        <div class="con1">
-            <div class="co">
-                <div class="co1"></div>
-                <div class="co2">
-                    <div class="c1"><span>3</span>个</div>
-                    <div class="c2">我的API</div>
+<div class="Api">
+    <div class="APItitle">鲸鱼智能API概览</div>
+    <div class="contain1">
+        <div class="con">
+            <div class="con1">
+                <div class="co">
+                    <div class="co1"></div>
+                    <div class="co2">
+                        <div class="c1"><span>{{ApiCount.apiCount}}</span>个</div>
+                        <div class="c2">我的API</div>
+                    </div>
+                </div>
+            </div>
+            <div class="con2 con1">
+                <div class="co">
+                    <div class="co1"></div>
+                    <div class="co2">
+                        <div class="c1"><span>{{ApiCount.invokeCount}}</span>次</div>
+                        <div class="c2">调用总数</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="con2 con1">
-            <div class="co">
-                <div class="co1"></div>
-                <div class="co2">
-                    <div class="c1"><span>3</span>个</div>
-                    <div class="c2">我的API</div>
+        <div class="tubiao">
+            <div class="title">API调用概览</div>
+            <div id="echarts_zhe"></div>
+        </div>
+    </div>
+    <div class="contain2">
+        <div class="title">已申请的接口/API(3)</div>
+        <div class="contain">
+            <div class="con" ng-repeat="data in ApplyedApi" repeat-finish="renderFinish()">
+                <div class="c1">{{data.apiInfo.apiName}}</div>
+                <div class="c2">申请时间:{{data.apiInfo.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</div>
+                <div class="c3">剩余次数:{{data.balance}}次</div>
+                <div class="c4">
+                    <echart-yuan data="data"></echart-yuan>
+                </div>
+                <div class="shiyong" ng-if="data.apiInfo.status==0">停用</div>
+                <div class="shiyong" ng-if="data.apiInfo.status==1">试用</div>
+                <div class="shiyong" ng-if="data.apiInfo.status==2">正式</div>
+            </div>
+            <div class="con2">
+                <div class="a">
+                    <div class="a1"></div>
+                    <div class="a2">申请新的API</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="tubiao">
-        <div class="title">API调用概览</div>
-        <div id="echarts_zhe"></div>
-    </div>
-</div>
-<div class="contain2">
-    <div class="title">已申请的接口/API(3)</div>
-    <div class="contain">
-        <div class="con" ng-repeat="a in [1,2]">
-            <div class="c1">全国车辆违章</div>
-            <div class="c2">申请时间:2017-07-12</div>
-            <div class="c3">剩余次数:220次</div>
-            <div class="c4">
-                <div id="echarts_zhe1"></div>
+    <div class="contain3">
+        <div class="title">已申请的接口/API(3)</div>
+        <div class="contain" ng-repeat="data in returnRecommendApi" ng-class="{'zeromargin':($index+1)%4=='0'}">
+            <div class="contain1">
+                <div class="div1">
+                    <lazy-src image-src="{{picurl}}"></lazy-src>
+                </div>
+                <div class="div2">{{data.apiName}}</div>
+                <div class="div3">{{data.apiInfodesc}}</div>
+                <div class="div4" ui-sref="index.whaleAPI.APIdetail" ng-click="enterDetail(data.apiId,data)">点击查看</div>
             </div>
-            <div class="shiyong"></div>
-        </div>
-        <div class="con2">
-            <div class="a">
-                <div class="a1"></div>
-                <div class="a2">申请新的API</div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="contain3">
-    <div class="title">已申请的接口/API(3)</div>
-    <div class="contain">
-        <div class="contain1">
-            <div class="div1">
-                <lazy-src image-src="{{picurl}}"></lazy-src>
-            </div>
-            <div class="div2">滑块验证码</div>
-            <div class="div3">描素会尽快爱活动看</div>
-            <div class="div4" ui-sref="index.whaleAPI.APIdetail" ng-click="enterDetail()">点击查看</div>
         </div>
     </div>
 </div>

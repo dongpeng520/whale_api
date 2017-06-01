@@ -4,16 +4,16 @@
             <div class="API_zuo">
                 <div class="contain">
                     <div class="div1">
-                        <lazy-src image-src="{{picurl}}"></lazy-src>
+                        <lazy-src image-src="{{api.imagepath}}"></lazy-src>
                     </div>
-                    <div class="div2">征信类</div>
+                    <div class="div2">{{api.apiName}}</div>
                 </div>
             </div>
             <div class="API_you">
-                <div class="you1">车辆违章信息</div>
-                <div class="you2">提供全国300多个城市区域的机动车交通违章查询服务,驾驶证违章查询,全国各地车辆的本地异地违章查询,汽车违章查询,摩托车违章查询等。</div>
+                <div class="you1">{{api.apiName}}</div>
+                <div class="you2">{{api.apidesc}}</div>
                 <div class="you3">
-                    <span class="span1" ng-click="APITry('车辆违章信息')" data-toggle="modal" data-target="#myModalAPITry">免费试用</span>
+                    <span class="span1" ng-click="APITry()" data-toggle="modal" data-target="#myModalAPITry">免费试用</span>
                     <span class="span2" data-toggle="modal" data-target="#myModalAPIBuy">立即购买</span>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 </h4>
             </div>
             <div class="modal-body" style="padding:55px 50px 25px;">
-                您选择<span style="color: #199ED8;">{{name}}</span>，试用次数:100次，请确认继续操作
+                您选择<span style="color: #199ED8;">{{api.apiName}}</span>，试用次数:100次，请确认继续操作
             </div>
             <div class="modal-footer" style="text-align: center;border-top: none;padding: 15px 15px 30px;">
                 <button type="button" ng-click="lijiTry()" class="btn btn-success" style="width: 185px;border-color:#ff7300;font-size: 14px;color: #fff;background-color: #ff7300">

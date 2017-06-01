@@ -15,7 +15,7 @@
                 <img src="static/img/set1.png" alt="">
                 <span>总览</span>
             </a>
-            <a ui-sref-active="active" ui-sref="API.view1" class="s1 a2">
+            <a ui-sref-active="active" ui-sref="API.buyRecord" class="s1 a2">
                 <img src="static/img/set2.png" alt="">
                 <span>购买记录</span>
             </a>
@@ -24,11 +24,11 @@
                 <span>用户中心</span>
             </a>
             <ul>
-                <li ui-sref-active="active" ui-sref="API.view2">账户信息</li>
-                <li ui-sref-active="active" ui-sref="API.view3">修改密码</li>
+                <li ui-sref-active="active1" ui-sref="API.Account">账户信息</li>
+                <li ui-sref-active="active1" ui-sref="API.Modify">修改密码</li>
             </ul>
         </div>
     </div>
 </div>
 <div ng-include="'overHead.html'" id="overHead" ng-controller="overHeadcontroller"></div>
-<div ui-view class="API"></div>
+<div ui-view ></div>

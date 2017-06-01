@@ -113,6 +113,26 @@ whaleModule.config(['$stateProvider','$urlRouterProvider',function ($stateProvid
         url: '/view',
         controller: "APIviewController",
         templateUrl: 'static/template/APIview.html'
+    }).
+    state('API.detail', {
+        url: '/detail',
+        controller: "detailController",
+        templateUrl: 'static/template/detail.html'
+    }).
+    state('API.Account', {
+        url: '/Account',
+        controller: "AccountController",
+        templateUrl: 'static/template/Account.html'
+    }).
+    state('API.Modify', {
+        url: '/Modify',
+        controller: "ModifyController",
+        templateUrl: 'static/template/Modify.html'
+    }).
+    state('API.buyRecord', {
+        url: '/buyRecord',
+        controller: "buyRecordController",
+        templateUrl: 'static/template/buyRecord.html'
     });
     $urlRouterProvider
         .otherwise('/index/indexhome');

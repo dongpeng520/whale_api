@@ -694,8 +694,15 @@ whaleModule.directive('imageLazySrc', ['$document', '$timeout',  '$compile',
                         loader.remove();
                         $element.unbind("load");
                         imgOnloadPhotoBar($element[0]);
+                    }).bind('error',function(){
+                        $element.bind("load", function(e) {
+                            loader.remove();
+                            $element.unbind("load");
+                            imgOnloadPhotoBar($element[0]);
+                        })
+                        $element[0].src = "static/img/no-picture1.png";
                     });
-                    $element[0].src = $scope.imageSrc;
+                    $element[0].src = "data:image/png;base64,"+$scope.imageSrc;
                 }
                 $timeout(function() {
                     loadImage();
@@ -712,12 +719,12 @@ whaleModule.directive('imageLazySrc', ['$document', '$timeout',  '$compile',
                         var sourceHeight;
 
                         if (imgWidth > imgHeight) {
-                            sourceHeight = (www / imgWidth * imgHeight).toFixed(0);
-                            sourceWidth = www;
+                            sourceHeight = (hhh / imgWidth * imgHeight).toFixed(0);
+                            sourceWidth = hhh;
                         }
                         else {
-                            sourceWidth = (hhh / imgHeight * imgWidth).toFixed(0);
-                            sourceHeight = hhh;
+                            sourceWidth = (www / imgHeight * imgWidth).toFixed(0);
+                            sourceHeight = www;
                         }
                         $(ele).css({
                             'width': sourceWidth + 'px',

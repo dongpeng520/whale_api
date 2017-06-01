@@ -12,4 +12,8 @@ whaleModule.controller("whaleAPIController",["$scope","$rootScope","$window","$h
     $scope.whaleAPIClassify=function(id){
         whale.store("categroyid",id);
     }
+    $scope.enterDetail=function(id,dd){
+        whale.store("apiId",id);
+        whale.store("api",dd)
+    }
 }])

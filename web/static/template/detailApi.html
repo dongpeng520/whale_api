@@ -24,9 +24,9 @@
     <div class="detail" ng-if="current =='API调用文档'">
         <div class="detail1">1.全国车辆违章信息</div>
         <div class="detail2">
-            <div class="d1">接口地址&nbsp;&nbsp;http://api.xxx.com/credit/trafficInfo</div>
-            <div class="d1">支持格式&nbsp;&nbsp;JSON</div>
-            <div class="d1">请求方式&nbsp;&nbsp;<span>POST</span></div>
+            <div class="d1">接口地址&nbsp;&nbsp;{{selectDocument.apiDocument[0].url}}</div>
+            <div class="d1">支持格式&nbsp;&nbsp;{{selectDocument.apiDocument[0].contentType}}</div>
+            <div class="d1">请求方式&nbsp;&nbsp;<span>{{selectDocument.apiDocument[0].requestMethod}}</span></div>
             <div class="d2">输入参数</div>
             <div class="API_order">
                 <ul class="order_title">
@@ -36,12 +36,12 @@
                     <li class="order_list4">可选/必选</li>
                     <li class="order_list5">备注</li>
                 </ul>
-                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
-                    <li class="order_list1">11</li>
-                    <li class="order_list2">22</li>
-                    <li class="order_list3">33</li>
-                    <li class="order_list4">44</li>
-                    <li class="order_list5">55</li>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in selectDocument.apiInputParam">
+                    <li class="order_list1">{{list.fieldName}}</li>
+                    <li class="order_list2">{{list.fieldDesc}}</li>
+                    <li class="order_list3">{{list.defaultValue}}</li>
+                    <li class="order_list4">{{list.isRequired}}</li>
+                    <li class="order_list5">{{list.remark}}</li>
                 </ul>
             </div>
             <div class="d2">响应结果</div>
@@ -55,13 +55,13 @@
                     <li class="order_list2">字段描述</li>
                     <li class="order_list5">备注</li>
                 </ul>
-                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
-                    <li class="order_list1">11</li>
-                    <li class="order_list2">22</li>
-                    <li class="order_list5">55</li>
+                <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in selectDocument.apiOutputParam">
+                    <li class="order_list1">{{list.fieldName}}</li>
+                    <li class="order_list2">{{list.fieldDesc}}</li>
+                    <li class="order_list5">{{list.remark}}</li>
                 </ul>
             </div>
-            <div class="d2">机动车信息</div>
+            <!--<div class="d2">机动车信息</div>
             <div class="API_order order590">
                 <ul class="order_title">
                     <li class="order_list1">字段名称</li>
@@ -86,7 +86,7 @@
                     <li class="order_list2">22</li>
                     <li class="order_list5">55</li>
                 </ul>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="detail" ng-if="current =='返回码'">
@@ -95,9 +95,9 @@
                 <li class="order_list1">错误码</li>
                 <li class="order_list2">说明</li>
             </ul>
-            <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
-                <li class="order_list1">11</li>
-                <li class="order_list2">22</li>
+            <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in selectCode">
+                <li class="order_list1">{{list.apiCode}}</li>
+                <li class="order_list2">{{list.apiCodeDesc}}</li>
             </ul>
         </div>
     </div>
@@ -139,15 +139,6 @@
         <div id="echarts_API"></div>
     </div>
     <div class="detail" ng-if="current =='调用日志'">
-        <div class="API_order order440">
-            <ul class="order_title">
-                <li class="order_list1">错误码</li>
-                <li class="order_list2">说明</li>
-            </ul>
-            <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in [1,2,3,4]">
-                <li class="order_list1">11</li>
-                <li class="order_list2">22</li>
-            </ul>
-        </div>
+
     </div>
 </div>

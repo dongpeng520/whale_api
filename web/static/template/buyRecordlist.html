@@ -1,0 +1,23 @@
+<div class="buyRecord_order">
+    <ul class="buyRecord_title">
+        <li class="buyRecord_list1">订单号</li>
+        <li class="buyRecord_list2">API名称</li>
+        <li class="buyRecord_list3">购买金额</li>
+        <li class="buyRecord_list4">购买媒介</li>
+        <li class="buyRecord_list5">购买次数</li>
+        <li class="buyRecord_list6">购买时间</li>
+        <li class="buyRecord_list7">购买状态</li>
+    </ul>
+    <ul class="buyRecord_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order">
+        <li class="buyRecord_list1">{{list.id}}</li>
+        <li class="buyRecord_list2">{{list.apiName}}</li>
+        <li class="buyRecord_list3">{{list.chargeAmount}}</li>
+        <li class="buyRecord_list4">{{list.apiName}}</li>
+        <li class="buyRecord_list5">{{list.chargedCount}}</li>
+        <li class="buyRecord_list6">{{list.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+        <li class="buyRecord_list7" ng-if="list.status==1">购买成功</li>
+        <li class="buyRecord_list8" ng-if="list.status==2">已退款</li>
+    </ul>
+    <div id="zero_order" ng-if="order.length==0">无数据</div>
+    <api-loading repeat-finish1="renderFinish1()"></api-loading>
+</div>

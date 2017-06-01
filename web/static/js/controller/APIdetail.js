@@ -4,6 +4,7 @@
 whaleModule.controller("APIdetailController",["$scope","$rootScope","$window","$http","$interval","$location","$timeout","$state", function($scope,$rootScope,$window,$http,$interval,$location,$timeout,$state){
     $scope.DataCategory=["API调用文档","返回码","接入指南"];
     var DataCategory1=[1,2,3,4,5,6,7,8,9,10,11];
+    $scope.api=whale.store("api");
     $timeout(function(){
         $scope.$broadcast("sendParent_history",DataCategory1)
     },1000)

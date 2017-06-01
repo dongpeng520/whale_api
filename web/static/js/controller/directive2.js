@@ -35,8 +35,9 @@ whaleModule.directive('orderClassify',["$rootScope","$http","$timeout",function(
         replace:true,
         templateUrl: "static/template/dir_classify.html",
         controller:["$scope",function($scope){
-            $scope.enterDetail=function(id){
-                whale.store("apiId",id)
+            $scope.enterDetail=function(id,dd){
+                whale.store("apiId",id);
+                whale.store("api",dd)
             }
         }],
         link: linkFunction
@@ -45,16 +46,71 @@ whaleModule.directive('orderClassify',["$rootScope","$http","$timeout",function(
 whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($rootScope,$http,$timeout){
     var linkFunction=function(scope,element,attr){
         scope.picloading=true;
-        $timeout(function(){
-            scope.current ='API调用文档';
-            scope.picloading=false;
-        },1000)
+        if(window.location.href.indexOf("/APIdetail") !== -1){//在本页面刷新
+            scope.current ="API调用文档";
+            $http.get("/whaleApiMgr/apiDocumentWebServiceController/selectDocument",{
+                params:{
+                    accessToken:"",
+                    apiId:whale.store("apiId")
+                }
+            }).success(function (data) {
+                if (data.code == 10200) {
+                    scope.selectDocument=data.data;
+                    scope.picloading=false;
+                }
+            });
+        }
+        scope.$on('$locationChangeSuccess', function(){//解决本页面后退前一页面，在点击回到本页面的问题
+            if(window.location.href.indexOf("/APIdetail") !== -1){
+                scope.current ="API调用文档";
+                $http.get("/whaleApiMgr/apiDocumentWebServiceController/selectDocument",{
+                    params:{
+                        accessToken:"",
+                        apiId:whale.store("apiId")
+                    }
+                }).success(function (data) {
+                    if (data.code == 10200) {
+                        scope.selectDocument=data.data;
+                        scope.picloading=false;
+                    }
+                });
+            }
+        });
         scope.$on('detailApi.request', function (e, req) { //监听在子控制器中定义的 分页点击 事件
             scope.picloading=true;
-            $timeout(function(){
+            /*$timeout(function(){
                 scope.current =req;
                 scope.picloading=false;
-            },1000)
+            },1000)*/
+            if(req=="API调用文档"){
+                $http.get("/whaleApiMgr/apiDocumentWebServiceController/selectDocument",{
+                    params:{
+                        accessToken:"",
+                        apiId:whale.store("apiId")
+                    }
+                }).success(function (data) {
+                    if (data.code == 10200) {
+                        scope.selectDocument=data.data;
+                        scope.picloading=false;
+                    }
+                });
+            }
+            if(req=="返回码"){
+                $http.get("whaleApiMgr/apiDocumentWebServiceController/selectCode",{
+                    params:{
+                        accessToken:"",
+                        apiId:whale.store("apiId")
+                    }
+                }).success(function (data) {
+                    if (data.code == 10200) {
+                        scope.selectCode=data.data;
+                        scope.picloading=false;
+                    }
+                });
+            }
+            if(req=="接入指南"){
+                scope.picloading=false;
+            }
         });
     }
     return {
@@ -72,6 +128,100 @@ whaleModule.directive('apiLoading',["$rootScope","$http","$timeout",function($ro
         restrict: "E",
         replace:true,
         templateUrl: "static/template/loading.html",
+        link: linkFunction
+    }
+}])
+whaleModule.directive('recordList',["$rootScope","$http","$timeout",function($rootScope,$http,$timeout){
+    var linkFunction=function(scope,element,attr){
+        function httpquery(index,flag){
+            scope.picloading=true;
+            $http.get("/whaleApiMgr/userApiInfoWebService/PurchaseHist",{
+                params: {
+                    accessToken: whale.store("accessToken"),
+                    startDate:whale.store("startDate"),
+                    endDate:whale.store("endDate"),
+                    status:whale.store("status"),
+                    PageIndex:index,
+                    PageSize:7
+                }
+            }).success(function (data) {
+                if (data.code == 10200) {
+                    scope.order=data.data;
+                    scope.picloading=false;
+                    $rootScope.$broadcast('history.page', data.total,7, flag);  //发送给pagemiddle  页码长度
+                }
+            });
+        }
+        scope.$on('sendParent_history',function(event,data){//监听在子控制器中定义的 点击切换品类 事件
+            httpquery(1)
+        });
+        scope.$on('pagehistory.request', function (e, req,flag) { //监听在子控制器中定义的 分页点击 事件
+            httpquery(req,flag);
+        });
+    }
+    return {
+        restrict: "E",
+        replace:true,
+        templateUrl: "static/template/buyRecordlist.html",
+        link: linkFunction
+    }
+}])
+whaleModule.directive('echartYuan',["$rootScope","$http","$timeout",function($rootScope,$http,$timeout){
+    var linkFunction=function(scope,element,attr){
+        scope.$on('echartYuan.request', function (e, req){
+            var myChart_zhe1 = echarts.init(element[0]);
+            myChart_zhe1.setOption({
+                series : [
+                    {
+                        name: '速度',
+                        type: 'gauge',
+                        min: 0,
+                        max: scope.data.totalCount,
+                        axisLine: {            // 坐标轴线
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                width: 10
+                            }
+                        },
+                        axisTick: {            // 坐标轴小标记
+                            length: 15,        // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                color: 'auto'
+                            }
+                        },
+                        splitLine: {           // 分隔线
+                            length: 20,         // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                color: 'auto'
+                            }
+                        },
+                        title : {
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                fontWeight: 'normal',
+                                fontSize: 12,
+                                fontStyle: 'italic'
+                            }
+                        },
+                        detail : {
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                fontWeight: 'normal',
+                                fontSize: 12
+                            },
+                            formatter:'{value}次'
+                        },
+                        data:[{value: scope.data.invokeCount, name: scope.data.apiInfo.apiName}]
+                    }
+                ]
+            });
+        })
+
+    }
+    return {
+        restrict: "E",
+        replace:true,
+        scope:{
+            data:"=data"
+        },
+        template: "<div class='echarts_zhe1'></div>",
         link: linkFunction
     }
 }])

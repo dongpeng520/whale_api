@@ -4,7 +4,7 @@
             <div class="API_zuo">
                 <div class="contain">
                     <div class="div1">
-                        <lazy-src image-src="{{picurl}}"></lazy-src>
+                        <lazy-src image-src="{{data.categroy.imagepath}}"></lazy-src>
                     </div>
                     <div class="div2">{{data.categroy.categroyName}}</div>
                     <div class="div3">{{data.categroy.categroyNote}}</div>
@@ -15,11 +15,11 @@
                 <div class="contain" ng-repeat="dd in data.apiInfolist">
                     <div class="contain1">
                         <div class="div1">
-                            <lazy-src image-src="{{picurl}}"></lazy-src>
+                            <lazy-src image-src="{{dd.imagepath}}"></lazy-src>
                         </div>
-                        <div class="div2">{{dd.apidesc}}</div>
-                        <div class="div3">{{dd.remark}}</div>
-                        <div class="div4">点击查看</div>
+                        <div class="div2">{{dd.apiName}}</div>
+                        <div class="div3">{{dd.apidesc}}</div>
+                        <div class="div4" ui-sref="index.whaleAPI.APIdetail" ng-click="enterDetail(dd.apiId,dd)">点击查看</div>
                     </div>
                 </div>
             </div>

@@ -335,22 +335,5 @@
 </div>
 
 
-<!--修改密码 激活-->
-<div id="password" ng-if="openflag_1">
-    <div class="contain">
-        <div class="close"><span ng-click="closedpassword()">&times;</span></div>
-        <div class="title">修改密码</div>
-        <div class="input_name">
-            <input type="password" ng-model="loginInf.name11" placeholder="旧密码" autofocus="autofocus">
-        </div>
-        <div class="input_password">
-            <input type="password" ng-model="loginInf.password11" placeholder="新密码">
-        </div>
-        <div class="input_password">
-            <input type="password" ng-model="loginInf.password21" placeholder="确认密码">
-        </div>
-        <div class="login_error" ng-if="error">{{error_wenzi}}</div>
-        <div class="submit" ng-click="submitpassword()">确认</div>
-    </div>
-</div>
+
 

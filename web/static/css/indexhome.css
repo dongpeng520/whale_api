@@ -115,8 +115,10 @@
               left: 0px;
               right: 0px;
               bottom: 0px;
+              top: 0px;
               margin: auto;
-              display: block; }
+              display: block;
+              text-align: center; }
           #whaleAPI .whaleAPI .API .API_zuo .contain .div2 {
             margin: 20px 0 10px;
             text-align: center;
@@ -164,8 +166,10 @@
                 left: 0px;
                 right: 0px;
                 bottom: 0px;
+                top: 0px;
                 margin: auto;
-                display: block; }
+                display: block;
+                text-align: center; }
             #whaleAPI .whaleAPI .API .API_you .contain .contain1 .div2 {
               margin: 10px 0 5px;
               text-align: center;
@@ -239,7 +243,8 @@
               right: 0px;
               bottom: 0px;
               margin: auto;
-              display: block; }
+              display: block;
+              text-align: center; }
           #classify .classify .classify_contain .contain_class .contain .contain1 .div2 {
             margin: 10px 0 5px;
             text-align: center;
@@ -319,6 +324,58 @@
   .order440 .order_list2 {
     border-right: 0; }
 
+.APIdetail2_contain {
+  min-height: 500px;
+  padding: 30px 0 30px 50px;
+  position: relative; }
+  .APIdetail2_contain .detail {
+    overflow: hidden; }
+    .APIdetail2_contain .detail .detail1 {
+      width: 180px;
+      float: left;
+      color: #1085e4;
+      font-size: 14px; }
+    .APIdetail2_contain .detail .detail2 {
+      width: 920px;
+      padding-left: 20px;
+      min-height: 400px;
+      float: left;
+      border-left: 1px solid #ccc;
+      color: #464646;
+      font-size: 14px; }
+      .APIdetail2_contain .detail .detail2 .d1 {
+        margin-bottom: 10px; }
+        .APIdetail2_contain .detail .detail2 .d1 span {
+          display: inline-block;
+          width: 100px;
+          height: 26px;
+          line-height: 26px;
+          border-radius: 5px;
+          color: #fff;
+          background: #1085e4;
+          text-align: center; }
+      .APIdetail2_contain .detail .detail2 .d2 {
+        margin: 20px 0 10px 0;
+        font-size: 20px; }
+      .APIdetail2_contain .detail .detail2 .details_contain {
+        height: 560px;
+        border: 1px solid #c9c9c9;
+        overflow-y: auto;
+        overflow-x: hidden; }
+        .APIdetail2_contain .detail .detail2 .details_contain pre {
+          background-color: #fff;
+          font-size: 14px;
+          border: 0;
+          color: #464646;
+          line-height: 3; }
+          .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview .prop {
+            color: #464646;
+            font-size: 16px; }
+          .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview ul {
+            list-style: none;
+            margin: 0 0 0 2em !important;
+            padding: 0; }
+
 #APIdetail {
   width: 100%;
   background: #e2e5ec;
@@ -353,8 +410,10 @@
             left: 0px;
             right: 0px;
             bottom: 0px;
+            top: 0px;
             margin: auto;
-            display: block; }
+            display: block;
+            text-align: center; }
         #APIdetail .APIdetail .APIdetail1 .API_zuo .contain .div2 {
           margin: 20px 0 0px 0;
           text-align: center;
@@ -409,57 +468,6 @@
         text-align: center;
         display: inline-block;
         cursor: pointer; }
-    #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain {
-      min-height: 500px;
-      padding: 30px 0 30px 50px;
-      position: relative; }
-      #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail {
-        overflow: hidden; }
-        #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail1 {
-          width: 180px;
-          float: left;
-          color: #1085e4;
-          font-size: 14px; }
-        #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 {
-          width: 920px;
-          padding-left: 20px;
-          min-height: 400px;
-          float: left;
-          border-left: 1px solid #ccc;
-          color: #464646;
-          font-size: 14px; }
-          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d1 {
-            margin-bottom: 10px; }
-            #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d1 span {
-              display: inline-block;
-              width: 100px;
-              height: 26px;
-              line-height: 26px;
-              border-radius: 5px;
-              color: #fff;
-              background: #1085e4;
-              text-align: center; }
-          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .d2 {
-            margin: 20px 0 10px 0;
-            font-size: 20px; }
-          #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain {
-            height: 560px;
-            border: 1px solid #c9c9c9;
-            overflow-y: auto;
-            overflow-x: hidden; }
-            #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre {
-              background-color: #fff;
-              font-size: 14px;
-              border: 0;
-              color: #464646;
-              line-height: 3; }
-              #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview .prop {
-                color: #464646;
-                font-size: 16px; }
-              #APIdetail .APIdetail .APIdetail2 .APIdetail2_contain .detail .detail2 .details_contain pre .jsonview ul {
-                list-style: none;
-                margin: 0 0 0 2em !important;
-                padding: 0; }
   #APIdetail .de1 {
     color: #464646;
     font-size: 14px;

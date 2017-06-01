@@ -282,6 +282,8 @@ input:-webkit-autofill {
       width: 100%; }
       .overSet .over_set .set2 .active {
         background: #1085e4; }
+      .overSet .over_set .set2 .active1 {
+        color: #1085e4; }
       .overSet .over_set .set2 .blue {
         background: #1085e4; }
       .overSet .over_set .set2 .a1:hover, .overSet .over_set .set2 .a2:hover, .overSet .over_set .set2 .a3:hover, .overSet .over_set .set2 .a4:hover {
@@ -318,7 +320,10 @@ input:-webkit-autofill {
         padding-left: 65px;
         color: #fff; }
         .overSet .over_set .set2 ul li {
-          list-style: inherit; }
+          list-style: inherit;
+          cursor: pointer; }
+          .overSet .over_set .set2 ul li:hover {
+            color: #1085e4; }
 
 .overHead {
   width: calc(100% - 200px);
