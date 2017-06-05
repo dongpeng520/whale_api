@@ -3,7 +3,7 @@
  */
 whaleModule.controller("HomebigController",["$scope","$rootScope","$window","$http","$interval","$location","$timeout","$state", function($scope,$rootScope,$window,$http,$interval,$location,$timeout,$state){
     $scope.$state = $state;
-    $scope.$on('$locationChangeSuccess', function(){
+    $scope.$on('$stateChangeSuccess', function(){
         if(window.location.href.indexOf("?user_id=") !== -1){
             var code=window.location.href.split("?user_id=")[1];
             console.log(code);

@@ -1,7 +1,7 @@
 /**
  * Created by Peter on 17/11/2.
  */
-window.whaleModule = angular.module('whaleModule', ['ui.router']);
+window.whaleModule = angular.module('whaleModule', ['ngAnimate','ui.router']);
 whaleModule.config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
     $stateProvider.
     state('index', {

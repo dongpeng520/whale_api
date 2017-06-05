@@ -875,6 +875,22 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
+  .contain.ng-enter {
+    transform:rotateY(90deg) translateY(-50%);
+    opacity: 0;
+  }
+  .contain.ng-enter-active {
+    transform:rotateY(0deg) translateY(-50%);
+    opacity: 1;
+  }
+  .contain.ng-leave {
+    transform:rotateY(90deg) translateY(-50%);
+    opacity: 1;
+  }
+  .contain.ng-leave-active {
+    transform:rotateY(0deg) translateY(-50%);
+    opacity: 0;
+  }
   .contain{
     width: 500px;
     margin: auto;
@@ -890,6 +906,7 @@
     padding: 24px 40px 40px;
     box-sizing: border-box;
     border-radius: 4px;
+    transition:transform 1s ease;
     a{
       font-size: 16px;
     }
