@@ -56,11 +56,12 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
             }).success(function (data) {
                 if (data.code == 10200) {
                     scope.selectDocument=data.data;
+                    $("#custom-spacing").JSONView(data.data.apiDocument[0].outputCodeDemo, { collapsed: true, nl2br: true, recursive_collapser: true });
                     scope.picloading=false;
                 }
             });
         }
-        scope.$on('$locationChangeSuccess', function(){//解决本页面后退前一页面，在点击回到本页面的问题
+        scope.$on('$locationChangeSuccess', function(){//解决本页面后退前一页面，在"点击"回到本页面的问题
             if(window.location.href.indexOf("/APIdetail") !== -1){
                 scope.current ="API调用文档";
                 $http.get("/whaleApiMgr/apiDocumentWebServiceController/selectDocument",{
@@ -71,6 +72,7 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
                 }).success(function (data) {
                     if (data.code == 10200) {
                         scope.selectDocument=data.data;
+                        $("#custom-spacing").JSONView(data.data.apiDocument[0].outputCodeDemo, { collapsed: true, nl2br: true, recursive_collapser: true });
                         scope.picloading=false;
                     }
                 });
@@ -91,6 +93,7 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
                 }).success(function (data) {
                     if (data.code == 10200) {
                         scope.selectDocument=data.data;
+                        $("#custom-spacing").JSONView(data.data.apiDocument[0].outputCodeDemo, { collapsed: true, nl2br: true, recursive_collapser: true });
                         scope.picloading=false;
                     }
                 });

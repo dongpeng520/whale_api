@@ -180,13 +180,26 @@ input:-webkit-autofill {
       text-align: center;
       font-size: 35px;
       color: #464646;
-      height: 100px;
-      line-height: 100px;
+      height: 50px;
+      line-height: 50px;
       background: #fff;
       margin-bottom: 20px; }
+      #Crawler .contain .contain1 span {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: 6px;
+        background: #1080e4;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px; }
     #Crawler .contain .contain2 {
       height: 480px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       overflow-y: auto;
       overflow-x: hidden; }
       #Crawler .contain .contain2 .zeromargin {

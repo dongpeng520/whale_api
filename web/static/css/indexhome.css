@@ -209,6 +209,8 @@
       text-align: center;
       display: inline-block;
       cursor: pointer; }
+      #classify .classify .classify_title .sele:hover {
+        border-bottom: 2px solid #1085e4; }
   #classify .classify .classify_contain {
     padding-top: 40px;
     padding-bottom: 40px; }

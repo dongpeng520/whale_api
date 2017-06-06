@@ -242,6 +242,9 @@
         text-align: center;
         display: inline-block;
         cursor: pointer;
+        &:hover{
+          border-bottom: 2px solid #1085e4;
+        }
       }
     }
     .classify_contain{
