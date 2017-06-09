@@ -3,13 +3,81 @@
  */
 whaleModule.controller("APIdetailController",["$scope","$rootScope","$window","$http","$interval","$location","$timeout","$state", function($scope,$rootScope,$window,$http,$interval,$location,$timeout,$state){
     $scope.DataCategory=["API调用文档","返回码","接入指南"];
-    var DataCategory1=[1,2,3,4,5,6,7,8,9,10,11];
     $scope.api=whale.store("api");
-    $timeout(function(){
-        $scope.$broadcast("sendParent_history",DataCategory1)
-    },1000)
-    $scope.APITry= function (name) {
-        $scope.name=name;
+
+    //1申请试用
+    //2购买充值
+    $scope.lijiTry=function(){
+        if(!whale.store("accessToken")){
+            alert("用户未登录");
+            return
+        }
+        $http.post("/whaleApiMgr/applyForHist/recharge"+"?accessToken="+whale.store("accessToken"),{
+            apiID:whale.store("apiId"),
+            chargeCount:100,
+            status:1,
+            remark:"申请试用"
+        }).success(function (data) {
+            if (data.code == 10200) {
+                //$scope.ApplyedApi=data.data;
+                $('#myModalAPITry').modal('hide')
+                $('#myModalAPITip').modal('show')
+            }
+        }).error(function(data) {
+            if (data.code == 41400) {
+                $rootScope.errormsg = '此用户在另一设备登录，请重新登录';
+                $timeout(function () {
+                    $rootScope.errormsg = null;
+                    whale.removestore("orgId");
+                    whale.removestore("appid");
+                    $location.path('/');
+                }, 1500);
+                return
+            }
+        });
+    }
+    $scope.buyInfo={
+        chargeCount:"",
+        remark:""
+    }
+    $scope.buy=function(){
+        if(!whale.store("orgId")){
+            alert("用户未登录");
+            return
+        }
+        if($scope.buyInfo.chargeCount==""){
+            $scope.buyFlagWen="请填写购买次数";
+            $scope.buyFlag=true;
+            return
+        }
+        if(!(/^([1-9][0-9]*)$/.test($scope.buyInfo.chargeCount))){
+            $scope.buyFlagWen="请填写正确的购买次数";
+            $scope.buyFlag=true;
+            return
+        }
+        $http.post("/whaleApiMgr/applyForHist/recharge"+"?accessToken="+whale.store("accessToken"),{
+            apiID:whale.store("apiId"),
+            chargeCount:$scope.buyInfo.chargeCount,
+            status:2,
+            remark:"购买充值"
+        }).success(function (data) {
+            if (data.code == 10200) {
+                //$scope.ApplyedApi=data.data;
+                $('#myModalAPIBuy').modal('hide')
+                $('#myModalAPITip').modal('show')
+            }
+        }).error(function(data) {
+            if (data.code == 41400) {
+                $rootScope.errormsg = '此用户在另一设备登录，请重新登录';
+                $timeout(function () {
+                    $rootScope.errormsg = null;
+                    whale.removestore("orgId");
+                    whale.removestore("appid");
+                    $location.path('/');
+                }, 1500);
+                return
+            }
+        });
     }
     $scope.selectCategory=function(index){
         if($scope.current==index){

@@ -89,7 +89,8 @@
       float: left;
       margin-right: 20px;
       margin-bottom: 20px;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       .Api .contain2 .contain .con .shiyong {
         position: absolute;
         right: 0;
@@ -123,7 +124,8 @@
         transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%); }
+        -o-transform: translate(-50%, -50%);
+        cursor: pointer; }
         .Api .contain2 .contain .con2 .a .a1 {
           width: 102px;
           height: 102px;
@@ -304,6 +306,8 @@
         text-align: center;
         display: inline-block;
         cursor: pointer; }
+        #detail .detail_contain2 .APIdetail2_title .sele:hover {
+          border-bottom: 2px solid #1085e4; }
 
 .buyRecord {
   width: calc(100% - 200px);
@@ -343,27 +347,38 @@
     min-height: 300px; }
     .buyRecord .buyRecord_order .buyRecord_list1 {
       width: 25%;
-      border-right: 1px solid #f5f3f3; }
+      min-width: 150px;
+      border-right: 1px solid #f5f3f3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
     .buyRecord .buyRecord_order .buyRecord_list2 {
       width: 15%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3; }
     .buyRecord .buyRecord_order .buyRecord_list3 {
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3; }
     .buyRecord .buyRecord_order .buyRecord_list4 {
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3; }
     .buyRecord .buyRecord_order .buyRecord_list5 {
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3; }
     .buyRecord .buyRecord_order .buyRecord_list6 {
       width: 20%;
+      min-width: 100px;
       border-right: 1px solid #f5f3f3; }
     .buyRecord .buyRecord_order .buyRecord_list7 {
       width: 10%;
+      min-width: 50px;
       color: #009900; }
     .buyRecord .buyRecord_order .buyRecord_list8 {
       width: 10%;
+      min-width: 50px;
       color: #FF3300; }
     .buyRecord .buyRecord_order .buyRecord_title {
       background: #fafafa;
@@ -642,5 +657,15 @@
     background: #fff;
     padding: 40px;
     border-radius: 5px; }
+    .Modify .contain label span {
+      width: 20px;
+      height: 20px;
+      background: red;
+      display: inline-block;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 10px; }
 
 /*# sourceMappingURL=API.css.map */

@@ -61,6 +61,57 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
                 }
             });
         }
+        if(window.location.href.indexOf("API/detail") !== -1){//在本页面刷新
+            scope.current ="今日统计";
+            $http.get("/whaleApiMgr/apiDocumentWebServiceController/totdayInvokeCount"+"?accessToken="+whale.store("accessToken"),{
+                params:{
+                    apiId:whale.store("apiId")
+                }
+            }).success(function (data) {
+                if (data.code == 10200) {
+                    var ApiData=[];
+                    var ApiTime=[];
+                    for(var a in data.data){
+                        ApiTime.push(a);
+                        ApiData.push(data.data[a])
+                    }
+                    var echarts_API = echarts.init(document.getElementById('echarts_API'));
+                    // 绘制图表
+                    echarts_API.setOption({
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        textStyle: {
+                            color: '#464646',
+                            fontSize:14
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: ApiTime
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                                name:"调用次数",
+                                type:'line',
+                                smooth:true,
+                                stack:'总量',
+                                data:ApiData
+                            }
+                        ]
+                    })
+                    scope.picloading=false;
+                    setTimeout(function (){
+                        window.onresize = function () {
+                            echarts_API.resize();
+                        }
+                    },200)
+                }
+            });
+        }
         scope.$on('$locationChangeSuccess', function(){//解决本页面后退前一页面，在"点击"回到本页面的问题
             if(window.location.href.indexOf("/APIdetail") !== -1){
                 scope.current ="API调用文档";
@@ -74,6 +125,57 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
                         scope.selectDocument=data.data;
                         $("#custom-spacing").JSONView(data.data.apiDocument[0].outputCodeDemo, { collapsed: true, nl2br: true, recursive_collapser: true });
                         scope.picloading=false;
+                    }
+                });
+            }
+            if(window.location.href.indexOf("API/detail") !== -1){
+                scope.current ="今日统计";
+                $http.get("/whaleApiMgr/apiDocumentWebServiceController/totdayInvokeCount"+"?accessToken="+whale.store("accessToken"),{
+                    params:{
+                        apiId:whale.store("apiId")
+                    }
+                }).success(function (data) {
+                    if (data.code == 10200) {
+                        var ApiData=[];
+                        var ApiTime=[];
+                        for(var a in data.data){
+                            ApiTime.push(a);
+                            ApiData.push(data.data[a])
+                        }
+                        var echarts_API = echarts.init(document.getElementById('echarts_API'));
+                        // 绘制图表
+                        echarts_API.setOption({
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            textStyle: {
+                                color: '#464646',
+                                fontSize:14
+                            },
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ApiTime
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [
+                                {
+                                    name:"调用次数",
+                                    type:'line',
+                                    smooth:true,
+                                    stack:'总量',
+                                    data:ApiData
+                                }
+                            ]
+                        })
+                        scope.picloading=false;
+                        setTimeout(function (){
+                            window.onresize = function () {
+                                echarts_API.resize();
+                            }
+                        },200)
                     }
                 });
             }
@@ -95,6 +197,56 @@ whaleModule.directive('detailApi',["$rootScope","$http","$timeout",function($roo
                         scope.selectDocument=data.data;
                         $("#custom-spacing").JSONView(data.data.apiDocument[0].outputCodeDemo, { collapsed: true, nl2br: true, recursive_collapser: true });
                         scope.picloading=false;
+                    }
+                });
+            }
+            if(req=="今日统计"){
+                $http.get("/whaleApiMgr/apiDocumentWebServiceController/totdayInvokeCount"+"?accessToken="+whale.store("accessToken"),{
+                    params:{
+                        apiId:whale.store("apiId")
+                    }
+                }).success(function (data) {
+                    if (data.code == 10200) {
+                        var ApiData=[];
+                        var ApiTime=[];
+                        for(var a in data.data){
+                            ApiTime.push(a);
+                            ApiData.push(data.data[a])
+                        }
+                        var echarts_API = echarts.init(document.getElementById('echarts_API'));
+                        // 绘制图表
+                        echarts_API.setOption({
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            textStyle: {
+                                color: '#464646',
+                                fontSize:14
+                            },
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ApiTime
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [
+                                {
+                                    name:"调用次数",
+                                    type:'line',
+                                    smooth:true,
+                                    stack:'总量',
+                                    data:ApiData
+                                }
+                            ]
+                        })
+                        scope.picloading=false;
+                        setTimeout(function (){
+                            window.onresize = function () {
+                                echarts_API.resize();
+                            }
+                        },200)
                     }
                 });
             }
@@ -150,6 +302,9 @@ whaleModule.directive('recordList',["$rootScope","$http","$timeout",function($ro
             }).success(function (data) {
                 if (data.code == 10200) {
                     scope.order=data.data;
+                    if(data.data.length==0){
+                        data.total=0
+                    }
                     scope.picloading=false;
                     $rootScope.$broadcast('history.page', data.total,7, flag);  //发送给pagemiddle  页码长度
                 }

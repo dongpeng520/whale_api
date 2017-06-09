@@ -27,21 +27,21 @@
         </div>
     </div>
     <div class="contain2">
-        <div class="title">已申请的接口/API(3)</div>
+        <div class="title">已申请的接口/API({{ApplyedApi.length}})</div>
         <div class="contain">
-            <div class="con" ng-repeat="data in ApplyedApi" repeat-finish="renderFinish()">
+            <div class="con" ng-repeat="data in ApplyedApi" repeat-finish="renderFinish()" ui-sref="API.detail" ng-click="enterDetail(data.apiInfo.apiId,data)">
                 <div class="c1">{{data.apiInfo.apiName}}</div>
                 <div class="c2">申请时间:{{data.apiInfo.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</div>
                 <div class="c3">剩余次数:{{data.balance}}次</div>
                 <div class="c4">
                     <echart-yuan data="data"></echart-yuan>
                 </div>
-                <div class="shiyong" ng-if="data.apiInfo.status==0">停用</div>
-                <div class="shiyong" ng-if="data.apiInfo.status==1">试用</div>
-                <div class="shiyong" ng-if="data.apiInfo.status==2">正式</div>
+                <div class="shiyong" ng-if="data.apiInfo.status==0"></div><!--停用-->
+                <div class="shiyong" ng-if="data.apiInfo.status==1"></div><!--试用-->
+                <div class="shiyong" ng-if="data.apiInfo.status==2"></div><!--正式-->
             </div>
             <div class="con2">
-                <div class="a">
+                <div class="a" ui-sref="index.whaleAPI">
                     <div class="a1"></div>
                     <div class="a2">申请新的API</div>
                 </div>
@@ -49,11 +49,11 @@
         </div>
     </div>
     <div class="contain3">
-        <div class="title">已申请的接口/API(3)</div>
+        <div class="title">推荐接口/API({{returnRecommendApi.length}})</div>
         <div class="contain" ng-repeat="data in returnRecommendApi" ng-class="{'zeromargin':($index+1)%4=='0'}">
             <div class="contain1">
                 <div class="div1">
-                    <lazy-src image-src="{{picurl}}"></lazy-src>
+                    <lazy-src image-src="{{data.imagepath}}"></lazy-src>
                 </div>
                 <div class="div2">{{data.apiName}}</div>
                 <div class="div3">{{data.apiInfodesc}}</div>

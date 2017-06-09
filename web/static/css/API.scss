@@ -115,6 +115,7 @@
         margin-right: 20px;
         margin-bottom: 20px;
         position: relative;
+        cursor: pointer;
         .shiyong{
           position: absolute;
           right: 0;
@@ -156,6 +157,7 @@
           -moz-transform: translate(-50%,-50%);
           -webkit-transform: translate(-50%,-50%);
           -o-transform: translate(-50%,-50%);
+          cursor: pointer;
           .a1{
             width: 102px;
             height: 102px;
@@ -369,6 +371,9 @@
         text-align: center;
         display: inline-block;
         cursor: pointer;
+        &:hover{
+          border-bottom: 2px solid #1085e4;
+        }
       }
     }
   }
@@ -415,34 +420,45 @@
     min-height: 300px;
     .buyRecord_list1{
       width: 25%;
+      min-width: 150px;
       border-right: 1px solid #f5f3f3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .buyRecord_list2{
       width: 15%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3;
     }
     .buyRecord_list3{
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3;
     }
     .buyRecord_list4{
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3;
     }
     .buyRecord_list5{
       width: 10%;
+      min-width: 50px;
       border-right: 1px solid #f5f3f3;
     }
     .buyRecord_list6{
       width: 20%;
+      min-width: 100px;
       border-right: 1px solid #f5f3f3;
     }
     .buyRecord_list7{
       width: 10%;
+      min-width: 50px;
       color: #009900;
     }
     .buyRecord_list8{
       width: 10%;
+      min-width: 50px;
       color: #FF3300;
     }
     .buyRecord_title{
@@ -785,5 +801,18 @@
     background: #fff;
     padding: 40px;
     border-radius: 5px;
+    label{
+      span{
+        width: 20px;
+        height:20px;
+        background: red;
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 10px;
+      }
+    }
   }
 }
