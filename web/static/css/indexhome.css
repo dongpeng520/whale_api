@@ -1,9 +1,66 @@
 #main1 {
   width: 100%;
-  min-height: 1234px;
-  background: url("../img/index_whale.png") no-repeat center;
-  background-size: cover; }
+  overflow: hidden; }
+  #main1 div {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    min-height: 1234px;
+    background: url("../img/index_whale.png") no-repeat center;
+    background-size: cover;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    animation: scal 13s ease infinite alternate;
+    -webkit-animation: scal 13s ease infinite alternate;
+    -moz-animation: scal 13s ease infinite alternate;
+    -o-animation: scal 13s ease infinite alternate; }
 
+@keyframes scal {
+  from {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1); }
+  to {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1); } }
+@-webkit-keyframes scal {
+  from {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1); }
+  to {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1); } }
+@-moz-keyframes scal {
+  from {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1); }
+  to {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1); } }
+@-o-keyframes scal {
+  from {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1); }
+  to {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1); } }
 #main2 {
   margin: 10px 0;
   overflow: hidden; }

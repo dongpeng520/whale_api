@@ -466,8 +466,8 @@
         border-radius: 5px; }
       .Account .contain .contain2 .APIKEY2 {
         display: none;
-        height: 200px;
         padding-left: 20px;
+        padding-bottom: 20px;
         background: #fff; }
         .Account .contain .contain2 .APIKEY2 .co1 {
           height: 50px; }
@@ -507,7 +507,8 @@
               color: #fff;
               margin-left: 20px;
               background: #169bd5;
-              border-radius: 5px; }
+              border-radius: 5px;
+              cursor: pointer; }
           .Account .contain .contain2 .APIKEY2 .co2 .c3 {
             width: 100px;
             height: 30px;
@@ -516,7 +517,8 @@
             color: #fff;
             margin-left: 115px;
             background: #169bd5;
-            border-radius: 5px; }
+            border-radius: 5px;
+            cursor: pointer; }
     .Account .contain .contain3 {
       color: #464646;
       font-size: 14px;
@@ -529,8 +531,8 @@
         border-radius: 5px; }
       .Account .contain .contain3 .PHONE2 {
         display: none;
-        height: 300px;
         padding-left: 20px;
+        padding-bottom: 20px;
         background: #fff;
         border-radius: 5px; }
         .Account .contain .contain3 .PHONE2 .co1 {
@@ -573,7 +575,8 @@
               color: #fff;
               margin-left: 20px;
               background: #169bd5;
-              border-radius: 5px; }
+              border-radius: 5px;
+              cursor: pointer; }
           .Account .contain .contain3 .PHONE2 .co2 .c3 {
             width: 100px;
             height: 30px;
@@ -583,7 +586,8 @@
             margin-left: 115px;
             background: #169bd5;
             border-radius: 5px;
-            margin-bottom: 20px; }
+            margin-bottom: 20px;
+            cursor: pointer; }
     .Account .contain .contain4 {
       color: #464646;
       font-size: 14px;
@@ -596,8 +600,8 @@
         border-radius: 5px; }
       .Account .contain .contain4 .EMAIL2 {
         display: none;
-        height: 200px;
         padding-left: 20px;
+        padding-bottom: 20px;
         background: #fff; }
         .Account .contain .contain4 .EMAIL2 .co1 {
           height: 50px; }
@@ -635,7 +639,8 @@
             color: #fff;
             margin-left: 115px;
             background: #169bd5;
-            border-radius: 5px; }
+            border-radius: 5px;
+            cursor: pointer; }
 
 .Modify {
   width: calc(100% - 200px);
