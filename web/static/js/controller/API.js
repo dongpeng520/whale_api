@@ -60,17 +60,32 @@ whaleModule.controller("APIController",["$scope","$rootScope","$window","$http",
     $scope.gotohome=function(){
         $location.path('/');
     }
-    /*$http.get("/whaleApiMgr/apiInfowebServiceController/selectApiInfobycategroy"+"?accessToken="+whale.store("accessToken"),{
-     params: {
-     orgId: whale.store("orgId"),
-     appId: whale.store("appid"),
-     PageIndex:1,
-     PageSize:5
-     }
-     }).success(function (data) {
-     if (data.code == 10200) {
-     $scope.historyCenter=data;
-     $scope.count=data.total;
-     }
-     });*/
+    $scope.loginout=function(){
+        $http.post("/account/usercontroller/loginout"+"?accessToken="+whale.store("accessToken")).success(function (data) {
+            if (data.code == 10200) {
+                $rootScope.errormsg = '退出成功';
+                $timeout(function() {
+                    $rootScope.errormsg = null;
+                    whale.removestore("orgId");
+                    whale.removestore("appid");
+                    $location.path('/');
+                }, 1500);
+            }else if(data.code == 41400||data.code==41401){
+                $rootScope.errormsg = '无效的accessToken,请重新登录';
+                $timeout(function() {
+                    $rootScope.errormsg = null;
+                    whale.removestore("orgId");
+                    whale.removestore("appid");
+                    $location.path('/');
+                }, 1500);
+                return
+            }else {
+                $rootScope.errormsg = '网络异常，请稍后重试';
+                $timeout(function() {
+                    $rootScope.errormsg = null;
+                }, 1500);
+                return
+            }
+        });
+    }
 }])

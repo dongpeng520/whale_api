@@ -221,4 +221,28 @@ whaleModule.controller("AccountController",["$scope","$rootScope","$window","$ht
             }
         });
     }
+    $scope.email=function(){
+        if(!((whale.email_pat).test($scope.infoAccount.email1) && $scope.infoAccount.email1.length > 1)){
+            $scope.error_wenzi1="邮箱格式有误";
+            $scope.error1=true;
+            return
+        }
+        $http.post("/whaleApiMgr/apiUserWebService/updateemail"+"?accessToken="+whale.store("accessToken")+"&email="+$scope.infoAccount.email1).success(function (data) {
+            if (data.code == 10200) {
+                $scope.error_wenzi1="重置成功";
+                $scope.error1=true;
+            }
+        }).error(function(data) {
+            if (data.code == 41400) {
+                $rootScope.errormsg = '此用户在另一设备登录，请重新登录';
+                $timeout(function () {
+                    $rootScope.errormsg = null;
+                    whale.removestore("orgId");
+                    whale.removestore("appid");
+                    $location.path('/');
+                }, 1500);
+                return
+            }
+        });
+    }
 }])

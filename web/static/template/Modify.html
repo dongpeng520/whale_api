@@ -39,8 +39,11 @@
                 </div>
             </div>
             <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-5" ng-if="error">
+                    <label class="text-danger control-label" ng-hide="myForm.currentPassword.$dirty&&myForm.password.$dirty&&myForm.passwordComire.$dirty">{{error_wenzi}}</label>
+                </div>
                 <div class="col-sm-offset-1 col-sm-10">
-                    <button style="margin-top: 20px;width: 100px;" type="submit" class="btn btn-primary">确定</button>
+                    <button ng-disabled="myForm.currentPassword.$dirty && myForm.currentPassword.$invalid ||myForm.password.$dirty && myForm.password.$invalid||myForm.passwordComire.$dirty && myForm.passwordComire.$invalid||(myForm.passwordComire.$dirty&&myForm.passwordComire.$dirty&&myForm.password.$dirty&&data.passwordComire!=data.password)" style="margin-top: 20px;width: 100px;" type="submit" ng-click="modify()" class="btn btn-primary">确定</button>
                 </div>
             </div>
         </form>

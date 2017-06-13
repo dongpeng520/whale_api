@@ -86,7 +86,8 @@
                         <span class="span1">新邮箱地址:</span>
                         <input type="text" ng-model="infoAccount.email1">
                     </div>
-                    <div class="c3">确定</div>
+                    <div class="alert alert-danger" style="width: 50%" ng-if="error1">{{error_wenzi1}}</div>
+                    <div class="c3" ng-click="email()">确定</div>
                 </div>
             </div>
         </div>
