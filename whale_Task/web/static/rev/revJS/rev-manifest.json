@@ -1,0 +1,11 @@
+{
+  "static/js/common/main.js": "static/js/common/main-07b957bd8d.js",
+  "static/js/controller.js": "static/js/controller-4e3115b738.js",
+  "static/js/controller/Account.js": "static/js/controller/Account-99a6f449b5.js",
+  "static/js/controller/directive.js": "static/js/controller/directive-4a7d0a3166.js",
+  "static/js/controller/index.js": "static/js/controller/index-0db95e32b9.js",
+  "static/js/controller/money.js": "static/js/controller/money-c06ce0c750.js",
+  "static/js/controller/task.js": "static/js/controller/task-fd423ad495.js",
+  "static/js/controller/whale.js": "static/js/controller/whale-57b0af13a6.js",
+  "static/js/controller/whaleapi.js": "static/js/controller/whaleapi-a2159bb82b.js"
+}

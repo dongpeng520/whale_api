@@ -1,0 +1,1 @@
+whaleModule.controller("ServiceController",["$scope","$rootScope","$window","$http","$interval","$location","$timeout","$state",function(e,t,o,i,a,c,l,r){i.get("/api/getApiServiceDetail",{params:{id:whale.store("id")}}).success(function(t){10200==t.code&&(e.getApiServiceDetail=t.data)})}]);

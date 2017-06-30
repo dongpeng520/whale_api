@@ -1,0 +1,75 @@
+<div class="order">
+    <ul class="order_title">
+        <li class="order_list1">爬虫需求</li>
+        <li class="order_list2">悬赏金额</li>
+        <li class="order_list3">截止时间</li>
+        <li class="order_list4">操作</li>
+    </ul>
+    <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order">
+        <li class="order_list1" title="{{list.apiName}}">{{list.apiName}}</li>
+        <li class="order_list2">￥{{list.money}}</li>
+        <li class="order_list3">{{list.endDate | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+        <li class="order_list4">
+            <p data-toggle="modal" data-target="#myModalTip" ng-click="renLing(list.id)"><span class="glyphicon glyphicon-download-alt"></span>我要认领</p>
+            <i class="visible"></i>
+        </li>
+    </ul>
+    <div id="zero_order" ng-if="order.length==0">无数据</div>
+    <api-loading></api-loading>
+</div>
+
+<div class="modal fade" id="myModalTip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog m150">
+        <div class="modal-content" style="width: 500px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span style="font-size: 30px;" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    我要认领
+                </h4>
+            </div>
+            <div class="modal-body" style="padding: 30px 40px;">
+                <div class="container-fluid">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group" style="position: relative">
+                            <span class="glyphicon glyphicon-user" style="position: absolute;top: 13px;font-size:15px;left: 28px;z-index: 999;color: #939292;"></span>
+                            <div class="col-sm-12">
+                                <input type="text" style="padding-left: 40px;height: 40px;" ng-model="data.account" class="form-control" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group" style="position: relative">
+                            <span class="glyphicon glyphicon-phone" style="position: absolute;top: 13px;font-size:15px;left: 28px;z-index: 999;color: #939292;"></span>
+                            <div class="col-sm-7">
+                                <input type="text" ng-model="data.phone" style="padding-left: 40px;height: 40px;" class="form-control" placeholder="手机">
+                            </div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-primary btn-block  btn-paddings"
+                                        type="submit" id="YZM1" style="background: #1179f6;color: #fff;" ng-click="sendYZM()">发送验证码
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group" style="position: relative">
+                            <span class="glyphicon glyphicon-check" style="position: absolute;top: 13px;font-size:15px;left: 28px;z-index: 999;color: #939292;"></span>
+                            <div class="col-sm-12">
+                                <input type="text" ng-model="data.YZM" style="padding-left: 40px;height: 40px;" class="form-control" placeholder="请输入验证码">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 alert alert-danger" style="margin-bottom: 0" ng-if="errorFlag">{{errorWen}}</div>
+                        <div class="row">
+                            <div class="col-md-12 mtop-btn">
+                                <button class="btn btn-primary btn-block  btn-paddings"
+                                        type="submit" id="button_home" style="background: #1179f6;color: #fff;" ng-click="submit()">确认认领
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

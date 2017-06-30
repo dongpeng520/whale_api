@@ -680,13 +680,13 @@ whaleModule.directive('imageLazySrc', ['$document', '$timeout',  '$compile',
                 var loader;
                 loader = $compile('<img class="img_loading" src="static/img/loading.gif">')($scope);
                 loader.css({
-                    'left': ' 50%',
-                    'top': ' 50% ',
-                    'position': ' absolute',
+                    'left': '50%',
+                    'top': '50% ',
+                    'position': 'absolute',
                     'width': '32px',
                     'height':'32px',
-                    'margin-top': ' -16px',
-                    'margin-left': ' -16px'
+                    'margin-top': '-16px',
+                    'margin-left': '-16px'
                 })
                 $element.after(loader);
                 function loadImage() {
@@ -706,7 +706,7 @@ whaleModule.directive('imageLazySrc', ['$document', '$timeout',  '$compile',
                 }
                 $timeout(function() {
                     loadImage();
-                }, 50);
+                }, 200);
                 function imgOnloadPhotoBar(ele){
                     var imgHeight = ele.naturalHeight;
                     var imgWidth = ele.naturalWidth;

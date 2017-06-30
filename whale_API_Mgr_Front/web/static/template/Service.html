@@ -1,0 +1,20 @@
+<div class="Service">
+    <h3>基础服务</h3>
+    <div class="contain">
+        <div class="contain1" ng-repeat="b in [1,2,3,0,5,6,7,8]">
+            <div class="con1 co">名称:代理</div>
+            <div class="con2 co">版本号：V1.0.2</div>
+            <div class="con3 co">操作：</div>
+            <div class="contain_contain" ng-repeat="a in [1,2,3]">
+                <div class="con4 co">IP:172.1.100.71&nbsp;&nbsp;PORT: 8980
+                    <img src="static/img/u1963.png" alt="">
+                </div>
+                <div class="con5">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">停止</button>
+                    <button type="button" class="btn btn-warning">重启</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1">升级</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

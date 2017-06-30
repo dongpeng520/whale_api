@@ -1,0 +1,1 @@
+whaleModule.controller("whaleApiController",["$scope","$rootScope","$window","$http","$interval","$location","$timeout","$state",function(o,t,e,l,$,n,i,r){}]);

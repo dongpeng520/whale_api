@@ -1,0 +1,27 @@
+<div class="order">
+    <ul class="order_title">
+        <li class="order_list1">来源</li>
+        <li class="order_list2">调用时间</li>
+        <li class="order_list3">日志类别</li>
+        <li class="order_list4">日志内容</li>
+    </ul>
+    <!--<ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order |limitTo :15" repeat-finish="renderFinish()">
+        <li class="order_list1">{{list.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+        <li class="order_list2" ng-bind="list.category"></li>
+        <li class="order_list3" ng-bind="list.url"></li>
+        <li class="order_list4">
+            <span ng-click="details_change(list._id)" ng-bind="'详情'"></span>
+        </li>
+    </ul>-->
+    <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order">
+        <li class="order_list1" title="{{list.serviceName}}">{{list.serviceName}}</li>
+        <li class="order_list2">{{list.timestamp}}</li>
+        <li class="order_list3">{{list.level}}</li>
+        <li class="order_list4">
+            <p><span>{{list.message}}</span></p>
+            <i class="visible"></i>
+        </li>
+    </ul>
+    <div id="zero_order" ng-if="order.length==0">无数据</div>
+    <api-loading repeat-finish1="renderFinish1()"></api-loading>
+</div>

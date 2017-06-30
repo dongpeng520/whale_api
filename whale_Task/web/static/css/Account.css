@@ -1,0 +1,247 @@
+.order1 {
+  width: 100%;
+  position: relative;
+  color: #666;
+  border: 1px solid #e3e3e3;
+  border-bottom: none; }
+  .order1 .order_list1 {
+    width: 33.3%;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .order1 .order_list2 {
+    width: 33.3%;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3; }
+  .order1 .order_list3 {
+    width: 33.3%;
+    border-bottom: 1px solid #e3e3e3; }
+  .order1 .order_title {
+    background: #f5f5f5;
+    overflow: hidden;
+    clear: both; }
+    .order1 .order_title li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold; }
+  .order1 .order_list {
+    overflow: hidden;
+    clear: both; }
+    .order1 .order_list:hover {
+      background: #f5f5f5; }
+    .order1 .order_list li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 12px;
+      color: #666; }
+      .order1 .order_list li.order_list3 {
+        font-weight: bolder;
+        color: red;
+        font-size: 14px; }
+  .order1 .order_listeven {
+    background: #fcfdff; }
+  .order1 .order_listodd {
+    background: #ffffff; }
+
+.order2 {
+  width: 100%;
+  position: relative;
+  color: #666;
+  border: 1px solid #e3e3e3;
+  border-bottom: none; }
+  .order2 .order_list1 {
+    width: 25%;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .order2 .order_list2 {
+    width: 25%;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3; }
+  .order2 .order_list3 {
+    width: 25%;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3; }
+  .order2 .order_list4 {
+    width: 25%;
+    border-bottom: 1px solid #e3e3e3; }
+  .order2 .order_title {
+    background: #f5f5f5;
+    overflow: hidden;
+    clear: both; }
+    .order2 .order_title li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold; }
+  .order2 .order_list {
+    overflow: hidden;
+    clear: both; }
+    .order2 .order_list:hover {
+      background: #f5f5f5; }
+    .order2 .order_list li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 12px;
+      color: #666; }
+      .order2 .order_list li.order_list3 {
+        font-weight: bolder;
+        color: red;
+        font-size: 14px; }
+      .order2 .order_list li.order_list4 {
+        color: #1b8a1b;
+        font-size: 12px; }
+  .order2 .order_listeven {
+    background: #fcfdff; }
+  .order2 .order_listodd {
+    background: #ffffff; }
+
+.MONEY .moneyTime {
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 20px; }
+  .MONEY .moneyTime .time1 {
+    padding: 10px 10px;
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    .MONEY .moneyTime .time1 .span1 {
+      position: absolute;
+      display: block;
+      width: 60px;
+      line-height: 28px;
+      height: 28px;
+      top: 11px;
+      left: 11px;
+      text-align: center;
+      background: #f5f5f5;
+      border-right: 1px solid #b3b3b3;
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px; }
+      .MONEY .moneyTime .time1 .span1 span {
+        margin-right: 3px; }
+    .MONEY .moneyTime .time1 input {
+      width: 220px;
+      height: 30px;
+      padding-left: 75px;
+      font-size: 12px;
+      border: 1px solid #b3b3b3;
+      border-radius: 4px;
+      cursor: pointer; }
+      .MONEY .moneyTime .time1 input:focus {
+        border: 1px solid #28b0f8; }
+  .MONEY .moneyTime .search {
+    width: 90px;
+    line-height: 30px;
+    height: 30px;
+    background: #1179f6;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer; }
+    .MONEY .moneyTime .search span {
+      margin-right: 5px; }
+    .MONEY .moneyTime .search:hover {
+      color: #1e15dc; }
+
+.Account .accountAdmin {
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 10px 10px; }
+  .Account .accountAdmin .name1 {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    margin-right: 20px; }
+  .Account .accountAdmin .name2 {
+    float: right;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background: #1179f6;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px; }
+    .Account .accountAdmin .name2:hover {
+      color: #1e15dc; }
+.Account .accountName {
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 10px 10px; }
+  .Account .accountName .name1 {
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    .Account .accountName .name1 span {
+      position: absolute;
+      top: 8px;
+      left: 15px;
+      color: #666;
+      font-size: 14px; }
+    .Account .accountName .name1 input {
+      width: 220px;
+      height: 30px;
+      padding-left: 45px;
+      font-size: 12px;
+      border: 1px solid #b3b3b3;
+      border-radius: 4px; }
+      .Account .accountName .name1 input:focus {
+        border: 1px solid #28b0f8; }
+  .Account .accountName .name2 {
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background: #1179f6;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px; }
+    .Account .accountName .name2:hover {
+      color: #1e15dc; }
+  .Account .accountName .add {
+    float: right;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    background: #1179f6;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px; }
+    .Account .accountName .add span {
+      margin-right: 5px; }
+    .Account .accountName .add:hover {
+      color: #1e15dc; }
+
+/*# sourceMappingURL=Account.css.map */

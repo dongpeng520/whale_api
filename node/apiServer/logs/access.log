@@ -1,0 +1,86 @@
+[2017-06-28 16:41:15.710] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 16:41:15.715] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 16:41:15.717] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 16:41:15.725] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 16:41:15.740] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 16:58:59.227] [WARN] normal - GET /
+[2017-06-28 16:58:59.249] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 16:58:59.261] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 16:58:59.277] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 16:58:59.285] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 16:58:59.288] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 16:58:59.316] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 16:58:59.320] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 17:08:21.124] [WARN] normal - GET /logout
+[2017-06-28 17:08:21.357] [WARN] normal - GET /
+[2017-06-28 17:08:21.380] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 17:08:21.388] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 17:08:21.394] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 17:08:21.402] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 17:08:21.408] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 17:08:21.517] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css.map
+[2017-06-28 17:08:44.217] [INFO] normal - GET /movie/595227210d92582310564189
+[2017-06-28 17:08:44.237] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 17:08:44.245] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 17:08:44.250] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 17:08:44.290] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css.map
+[2017-06-28 17:08:46.201] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css.map
+[2017-06-28 18:01:23.482] [INFO] normal - GET /public/add
+[2017-06-28 18:02:50.544] [WARN] normal - GET /
+[2017-06-28 18:02:50.572] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.588] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.591] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.599] [ERROR] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 18:02:50.608] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.614] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.620] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 18:02:50.625] [ERROR] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 18:02:50.636] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:50.652] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 18:02:55.655] [WARN] normal - GET /
+[2017-06-28 18:02:55.673] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:55.678] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:55.681] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:55.685] [ERROR] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 18:02:55.687] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:02:55.698] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 18:03:12.607] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:03:12.613] [ERROR] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 18:03:25.403] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:03:25.410] [ERROR] normal - GET /public/libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 18:03:32.913] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:03:32.920] [ERROR] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 18:04:42.201] [INFO] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 18:06:30.671] [WARN] normal - GET /
+[2017-06-28 18:06:30.700] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-28 18:06:30.722] [INFO] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-28 18:06:30.724] [INFO] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-28 18:06:30.728] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:06:30.739] [ERROR] normal - GET /www.baidu.com
+[2017-06-28 18:06:30.784] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css.map
+[2017-06-28 18:06:30.831] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-28 18:06:30.836] [ERROR] normal - GET /www.baidu.com
+[2017-06-30 10:15:18.536] [WARN] normal - GET /
+[2017-06-30 10:15:18.602] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-30 10:15:18.607] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-30 10:15:18.608] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-30 10:15:18.699] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-30 10:15:18.703] [ERROR] normal - GET /www.baidu.com
+[2017-06-30 10:15:18.758] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-30 10:15:18.762] [ERROR] normal - GET /www.baidu.com
+[2017-06-30 10:15:18.822] [ERROR] normal - [PAGE]Server.route: Try to load a resource that does not exist.
+[2017-06-30 10:15:18.830] [ERROR] normal - GET /favicon.ico
+[2017-06-30 10:26:33.264] [WARN] normal - GET /admin/list
+[2017-06-30 10:26:33.301] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-30 10:26:33.303] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-30 10:26:33.304] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-30 10:26:33.305] [WARN] normal - GET /js/admin.js
+[2017-06-30 10:26:36.575] [INFO] normal - GET /admin/update/595227210d92582310564189
+[2017-06-30 10:26:36.589] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-30 10:26:36.594] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-30 10:26:36.595] [WARN] normal - GET /libs/jquery/dist/jquery.min.js
+[2017-06-30 10:26:41.182] [INFO] normal - DELETE /admin/list?id=595215ee1dbc7021782699ca
+[2017-06-30 10:26:51.394] [INFO] normal - GET /admin/movie
+[2017-06-30 10:26:51.410] [WARN] normal - GET /libs/bootstrap/dist/css/bootstrap.min.css
+[2017-06-30 10:26:51.413] [WARN] normal - GET /libs/bootstrap/dist/js/bootstrap.min.js
+[2017-06-30 10:26:51.415] [WARN] normal - GET /libs/jquery/dist/jquery.min.js

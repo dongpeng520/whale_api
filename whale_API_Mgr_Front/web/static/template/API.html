@@ -1,0 +1,118 @@
+<div class="API_contain">
+    <div class="API_contain_header">
+        <div class="header1">{{getApiServiceDetail[0].apiName}}</div>
+        <!--<div class="header2">申请时间：2017-03-28</div>-->
+    </div>
+    <div class="API_contain_xinxi">
+        <div class="xinxi_zuo">
+            <div class="xin1">基本信息</div>
+            <div class="xin1">API名称：{{getApiServiceDetail[0].apiName}}</div>
+            <div class="xin1">创建时间：{{getApiServiceDetail[0].createTime | date:"yyyy-MM-dd"}}</div>
+            <div class="xin1 last">版本号：V{{getApiServiceDetail[0].serviceVersion}}</div>
+            <div class="xin1 caozuo">操作：</div>
+            <div class="contain_contain" ng-repeat="data in getApiServiceDetail">
+                <div class="con4 co">IP:{{data.ip}}&nbsp;&nbsp;PORT: {{data.httpPort}}
+                    <img src="static/img/u1963.png" alt="">
+                </div>
+                <div class="con5">
+                    <button type="button" ng-click="stop(data)" class="btn btn-danger" data-toggle="modal" data-target="#myModal">停止</button>
+                    <button type="button" ng-click="restart(data)" class="btn btn-warning" data-toggle="modal" data-target="#myModal1">重启</button>
+                    <button type="button" ng-click="upgrade(data)" class="btn btn-success" data-toggle="modal" data-target="#myModal2">升级</button>
+                </div>
+            </div>
+        </div>
+        <div class="xinxi_you">
+            <div id="echarts_zhe"></div>
+        </div>
+    </div>
+</div>
+<!-- 模态框（Modal）停止 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog m150">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(214, 233, 198, 1);color: #3C763D;border-radius: 5px;">
+
+                <h4 class="modal-title">
+                    确认
+                </h4>
+            </div>
+            <div class="modal-body">
+                是否确认停止<span style="color: #199ED8;">{{stopname}}&nbsp;&nbsp;&nbsp;&nbsp;</span>IP:{{IP}}&nbsp;&nbsp;&nbsp;&nbsp;PORT: {{httpPort}}？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-success" ng-click="stopModel()">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal）重启 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog m150">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(214, 233, 198, 1);color: #3C763D;border-radius: 5px;">
+
+                <h4 class="modal-title">
+                    确认
+                </h4>
+            </div>
+            <div class="modal-body">
+                是否确认重启<span style="color: #199ED8;">{{restartname}}&nbsp;&nbsp;&nbsp;&nbsp;</span>IP:{{IP}}&nbsp;&nbsp;&nbsp;&nbsp;PORT: {{httpPort}}？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-success" ng-click="restartModel()">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） 版本升级-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog m150">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(214, 233, 198, 1);color: #3C763D;border-radius: 5px;">
+
+                <h4 class="modal-title">
+                    版本升级
+                </h4>
+            </div>
+            <div class="modal-body">
+                是否确定升级<span style="color: #199ED8;">{{upgradename}}&nbsp;&nbsp;&nbsp;&nbsp;</span>IP:{{IP}}&nbsp;&nbsp;&nbsp;&nbsp;PORT: {{httpPort}}？
+                <div style="margin-top: 20px">请上传升级包：<input style="display: inline-block;margin-left: 20px" type="file"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-success" ng-click="upgradeModel()">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModalTip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog m150" style="width: 480px">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #1085e4;color: #fff;border-radius: 5px;">
+
+                <h4 class="modal-title" style="text-align: center">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body" style="padding:55px 50px 25px;text-align: center">
+                操作成功！
+            </div>
+            <div class="modal-footer" style="text-align: center;border-top: none;">
+                <button type="button" class="btn btn-success" data-dismiss="modal" style="width: 185px;border-color:#ff7300;font-size: 14px;color: #fff;background-color: #ff7300">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

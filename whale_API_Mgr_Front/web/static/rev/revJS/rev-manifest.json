@@ -1,0 +1,10 @@
+{
+  "static/js/common/main.js": "static/js/common/main-07b957bd8d.js",
+  "static/js/controller.js": "static/js/controller-719d48717c.js",
+  "static/js/controller/API.js": "static/js/controller/API-08c1a5ad15.js",
+  "static/js/controller/Service.js": "static/js/controller/Service-ad25b4cc8b.js",
+  "static/js/controller/directive.js": "static/js/controller/directive-30ce78d85d.js",
+  "static/js/controller/indexhome.js": "static/js/controller/indexhome-9a5d5308a2.js",
+  "static/js/controller/retrieval.js": "static/js/controller/retrieval-011e78dc15.js",
+  "static/js/controller/whaleapi.js": "static/js/controller/whaleapi-a2159bb82b.js"
+}

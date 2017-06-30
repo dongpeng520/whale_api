@@ -1,0 +1,32 @@
+<h3>未认领</h3>
+<div class="order1">
+    <ul class="order_title">
+        <li class="order_list1">网站</li>
+        <li class="order_list2">截止时间</li>
+        <li class="order_list3">金额</li>
+    </ul>
+    <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order1">
+        <li class="order_list1" title="{{list.apiDesc}}">{{list.apiDesc}}</li>
+        <li class="order_list2">{{list.endDate | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+        <li class="order_list3">￥{{list.money}}</li>
+    </ul>
+    <div id="zero_order" ng-if="order1.length==0">无数据</div>
+    <pic-loading picload="picload"></pic-loading>
+</div>
+<h3>已认领</h3>
+<div class="order2">
+    <ul class="order_title">
+        <li class="order_list1">网站</li>
+        <li class="order_list2">剩余开始时间</li>
+        <li class="order_list3">金额</li>
+        <li class="order_list4">认领人</li>
+    </ul>
+    <ul class="order_list" ng-class="{order_listeven: !$even, order_listodd: !$odd}" ng-repeat="list in order2">
+        <li class="order_list1" title="{{list.apiDesc}}">{{list.apiDesc}}</li>
+        <li class="order_list2">{{list.endDate | date:"yyyy-MM-dd HH:mm:ss"}}</li>
+        <li class="order_list3">￥{{list.money}}</li>
+        <li class="order_list4">{{list.name}}</li>
+    </ul>
+    <div id="zero_order1" ng-if="order2.length==0">无数据</div>
+    <pic-loading picload="picload"></pic-loading>
+</div>
